@@ -112,17 +112,27 @@ class UserProxyAgent:
 
     def wolfram_query(self, query: str):
         """
-        Run one wolfram query and return the output.
-        return:
-            output: string with the output of the query
-            is_success: boolean indicating whether the query was successful
+        Run one wolfram query MANUALLY - user will execute it
         """
-        # wolfram query handler
-        wolfram = WolframAlphaAPIWrapper()
-        output, is_success = wolfram.run(query)
-        if output == "":
-            output = "Error: The wolfram query is invalid."
-        return output, is_success
+        print("\n" + "="*60)
+        print("🚀 WOLFRAM ALPHA QUERY DETECTED!")
+        print("="*60)
+        print(f"QUERY: {query}")
+        print("="*60)
+        print("\n📋 Instructions:")
+        print("1. Go to: https://www.wolframalpha.com/")
+        print("2. Paste the query above into the search box")
+        print("3. Copy the answer/result")
+        print("4. Paste it below when prompted")
+        print("="*60)
+        
+        # Get user input
+        wolfram_result = input("\n📝 Paste Wolfram Alpha result here: ").strip()
+        
+        if wolfram_result.lower() in ["", "none", "no result"]:
+            return "No result from Wolfram Alpha.", False
+        
+        return f"Wolfram Alpha Result: {wolfram_result}", True
 
     def _remove_newlines_outside_quotes(self, s):
         """Remove newlines outside of quotes.

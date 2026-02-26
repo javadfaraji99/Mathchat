@@ -5,7 +5,7 @@ import os
 import json
 import re
 import copy
-from openai.error import InvalidRequestError, RateLimitError, Timeout
+from openai import InvalidRequestError, RateLimitError, Timeout
 from utils import write_json, remove_asy_sections, math_type_mapping, mylogger
 from prompts import PROMPTS
 
@@ -303,3 +303,24 @@ class MathChat:
         tp = problem_set[0]["type"]
         self.logger.log(f"{tp} Accuracy: {correct_counts}/{len(problem_set)} = {correct_counts/len(problem_set)}")
         self.logger.log("------------------------------------------------------------\n", verbose=True)
+
+    def test_single_problem(self, problem_text, problem_type="Algebra"):
+        """
+        Test with a single problem text (for manual testing)
+        Returns the conversation result
+        """
+        problem = {
+            "problem_id": "manual_test",
+            "problem": problem_text,
+            "type": problem_type,
+            "solution": "N/A",  # For testing
+            "level": "Level 5"
+        }
+        
+        print(f"\n🔧 Testing MathChat on problem:")
+        print(f"Type: {problem_type}")
+        print(f"Problem: {problem_text[:200]}..." if len(problem_text) > 200 else f"Problem: {problem_text}")
+        print("-" * 60)
+        
+        # Call the existing conversation method
+        return self.make_conversation(problem, file_to_be_saved=None)
