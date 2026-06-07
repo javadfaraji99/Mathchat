@@ -145,3 +145,20 @@ def write_json(dict_to_save, file):
     jstring = json.dumps(dict_to_save, indent=2)
     with open(file, "w") as j:
         j.write(jstring)
+
+def load_config(config_path):
+    """Load credentials from JSON config file."""
+    with open(config_path, "r") as f:
+        config_list = json.load(f)
+    return config_list
+
+def setup_proxy(config_list):
+    """Extract proxy from config and set environment variables."""
+    if config_list and "proxy" in config_list[0]:
+        proxy = config_list[0]["proxy"]
+        if "http" in proxy:
+            os.environ['http_proxy'] = proxy["http"]
+        if "https" in proxy:
+            os.environ['https_proxy'] = proxy["https"]
+        del config_list[0]["proxy"]  # Remove to avoid FLAML errors
+    return config_list

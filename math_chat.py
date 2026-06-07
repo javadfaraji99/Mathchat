@@ -5,7 +5,7 @@ import os
 import json
 import re
 import copy
-from openai import InvalidRequestError, RateLimitError, Timeout
+from openai.error import InvalidRequestError, RateLimitError, Timeout
 from utils import write_json, remove_asy_sections, math_type_mapping, mylogger
 from prompts import PROMPTS
 
@@ -304,7 +304,7 @@ class MathChat:
         self.logger.log(f"{tp} Accuracy: {correct_counts}/{len(problem_set)} = {correct_counts/len(problem_set)}")
         self.logger.log("------------------------------------------------------------\n", verbose=True)
 
-    def test_single_problem(self, problem_text, problem_type="Algebra"):
+    def test_single_problem(self, problem_text, problem_type="Algebra", file_to_be_saved=None):
         """
         Test with a single problem text (for manual testing)
         Returns the conversation result
@@ -323,4 +323,4 @@ class MathChat:
         print("-" * 60)
         
         # Call the existing conversation method
-        return self.make_conversation(problem, file_to_be_saved=None)
+        return self.make_conversation(problem, file_to_be_saved=file_to_be_saved)

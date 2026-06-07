@@ -2,9 +2,10 @@
 Quick test with a hardcoded problem
 """
 from math_chat import MathChat
-from utils import mylogger
+from utils import mylogger, load_config, setup_proxy
+import os
 
-def quick_test():
+def quick_test(config_list):
     # Hardcoded test problem
     test_problem = "Solve the quadratic equation: x^2 - 5x + 6 = 0"
     
@@ -17,20 +18,20 @@ def quick_test():
         prompt_location="user",
         max_round=5,
         logger=mylogger("quick_test.log"),
-        use_cache=False
+        use_cache=False,
+        config_list=config_list
     )
-    
+
+    output_folder = "./test_output"
+    os.makedirs(output_folder, exist_ok=True)  
+
     # Run test
-    result = math_chat.test_single_problem(test_problem, "Algebra")
+    result = math_chat.test_single_problem(test_problem, "Algebra", file_to_be_saved=os.path.join(output_folder, "conversation.txt"))
     
     # Show answer
-    if "\\boxed{" in result['response_with_ans']:
-        response = result['response_with_ans']
-        start = response.find("\\boxed{") + 7
-        end = response.find("}", start)
-        print(f"\n🎯 Answer: {response[start:end]}")
-    else:
-        print(f"\nResponse: {result['response_with_ans']}")
+    print(f"\n📝 Full response:\n{result['response_with_ans']}")
 
 if __name__ == "__main__":
-    quick_test()
+    config_list = load_config("OAI_CONFIG_LIST.json")
+    config_list = setup_proxy(config_list)
+    quick_test(config_list)
