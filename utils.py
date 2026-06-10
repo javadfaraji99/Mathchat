@@ -3,6 +3,7 @@ import re
 import os
 import json
 import argparse
+from dotenv import load_dotenv
 
 math_type_mapping = {
     "Algebra": "algebra",
@@ -152,13 +153,36 @@ def load_config(config_path):
         config_list = json.load(f)
     return config_list
 
-def setup_proxy(config_list):
-    """Extract proxy from config and set environment variables."""
-    if config_list and "proxy" in config_list[0]:
-        proxy = config_list[0]["proxy"]
-        if "http" in proxy:
-            os.environ['http_proxy'] = proxy["http"]
-        if "https" in proxy:
-            os.environ['https_proxy'] = proxy["https"]
-        del config_list[0]["proxy"]  # Remove to avoid FLAML errors
-    return config_list
+def setup_proxy():
+    """Set proxy from .env file."""
+    load_dotenv()
+    
+    if os.environ.get('HTTP_PROXY'):
+        os.environ['http_proxy'] = os.environ['HTTP_PROXY']
+        print('yes')
+    if os.environ.get('HTTPS_PROXY'):
+        print('no')
+        os.environ['https_proxy'] = os.environ['HTTPS_PROXY']
+
+def load_local_dataset(base_folder="dataset"):
+    sep_cate = []
+    
+    # Get all subfolders directly
+    for category_folder in os.listdir(base_folder):
+        folder_path = os.path.join(base_folder, category_folder)
+        if not os.path.isdir(folder_path):
+            continue
+        
+        problems = []
+        for json_file in sorted(os.listdir(folder_path)):
+            if json_file.endswith('.json'):
+                with open(os.path.join(folder_path, json_file)) as f:
+                    problem = json.load(f)
+                    problem["problem_id"] = json_file.replace('.json', '')
+                    problems.append(problem)
+        
+        if problems:
+            sep_cate.append(problems)
+            print(f"Loaded {len(problems)} problems from {category_folder}")
+    
+    return sep_cate

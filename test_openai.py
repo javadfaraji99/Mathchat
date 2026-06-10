@@ -1,28 +1,21 @@
-import json
 import openai
-
-
-def load_config(config_path="OAI_CONFIG_LIST.json"):
-    """Load credentials from JSON config file."""
-    with open(config_path, "r") as f:
-        config_list = json.load(f)
-    return config_list
-
+from utils import load_config, setup_proxy
 
 def main():
     # -----------------------------------------
     # Load credentials from JSON
     # -----------------------------------------
-    config_list = load_config()
-    config = config_list[0]  # Use the first config entry
+    config_list = load_config('OAI_CONFIG_LIST.json')
+
+    setup_proxy()
 
     # -----------------------------------------
     # Set openai module-level settings (v0.27.x style)
     # -----------------------------------------
-    openai.api_key = config["api_key"]
-    openai.api_base = config["api_base"]
+    openai.api_key = config_list["api_key"]
+    openai.api_base = config_list["api_base"]
 
-    model = config["model"]
+    model = config_list["model"]
 
     # print(f"OpenAI version : {openai.__version__}")
     print(f"Using model    : {model}")
@@ -60,6 +53,8 @@ def main():
     print(f"Tokens used — prompt: {usage['prompt_tokens']}, "
           f"completion: {usage['completion_tokens']}, "
           f"total: {usage['total_tokens']}")
+    
+    print(response)
 
 
 if __name__ == "__main__":
