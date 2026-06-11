@@ -25,6 +25,7 @@ class MathChat:
         use_cache=True,
         refine=False,
         config_list=None,
+        sleep_time=30,
     ):
         self.max_round = max_round
         if prompt_type not in PROMPTS:
@@ -34,6 +35,7 @@ class MathChat:
         self.prompt_loaction = prompt_location
         self.prompt = PROMPTS[prompt_type]
         self.refine = refine
+        self.sleep_time = sleep_time
 
         # if the prompt_location is set to system, then the prompt is put in the system message
         self.sys_type = sys_type
@@ -63,6 +65,7 @@ class MathChat:
         self.config_list = config_list
 
     def make_conversation(self, problem, n=1, file_to_be_saved=None):
+        conversation_start_time = time.time()
         # initialize the query handler
         proxy_agent = UserProxyAgent()
 
@@ -99,8 +102,8 @@ class MathChat:
         response_with_ans = ""  # save the response with \box to get the answer
         rr = 0  # round
         total_completion_tokens = 0
+        start_time = time.time()
         while rr < self.max_round:
-            time.sleep(30)
             # 1. get the response from the assistant, handle exceptions
             try:
                 if self.config_list is not None:
@@ -116,6 +119,13 @@ class MathChat:
             except (RateLimitError, Timeout):
                 print("Ratelimit or timeout, retrying...", flush=True)
                 continue
+            
+            # Dynamic sleep after API call
+            elapsed = time.time() - start_time
+            if self.sleep_time > elapsed:
+                time.sleep(self.sleep_time - elapsed)
+            start_time = time.time()
+            
             try:
                 total_completion_tokens += raw_responses["usage"]["completion_tokens"]
             except Exception:
@@ -185,6 +195,7 @@ class MathChat:
             rr += 1
         save_message_to_file("Solution: " + problem["solution"])
 
+        solution_time = time.time() - conversation_start_time
         return {
             "total_completion_tokens": total_completion_tokens,
             "valid_q_count": proxy_agent.valid_q_count,  # number of valid queries
@@ -194,6 +205,7 @@ class MathChat:
             "response_with_new_ans": response_with_new_ans,  # string instead of list
             "messages": config["messages"],
             "round": min(rr + 1, self.max_round),
+            "solution_time": solution_time,
         }
 
     def str_splitter(self, string, length=300):
@@ -239,7 +251,7 @@ class MathChat:
             saving_folder (str): the result folder to save the solved problems, the category folder will be created inside
 
         Returns:
-            None
+            correct_counts, category_time
         """
         if not self.logger:
             self.logger = mylogger(os.path.join(saving_folder, "log.txt"))
@@ -253,7 +265,8 @@ class MathChat:
         done_problems = set([int(f.split(".")[0].split('_')[-1]) for f in os.listdir(saving_folder) if "json" in f])
 
         correct_counts = 0
-        self.logger.log("id : is_correct $ ans $ correct_ans | corrected_ans $ round")
+        category_time = 0
+        self.logger.log("id : is_correct $ ans $ correct_ans | corrected_ans $ round $ time(s)")
         for count, problem in enumerate(problem_set):
             problem_path = os.path.join(saving_folder, problem["problem_id"] + ".json")
 
@@ -264,9 +277,11 @@ class MathChat:
                 new_ans = problem["new_ans"] if "new_ans" in problem else ""
                 if problem["new_ans"] == problem["voted_answer"]:
                     problem["new_ans"] = "same"
+                solution_time = problem.get("solution_time", 0)
                 self.logger.log(
-                    f'{problem["problem_id"]} : {bool(problem["is_correct"])} $ {problem["voted_answer"]} $ {problem["correct_ans"]} | {new_ans} $ {problem["round"]} $ (from previous run)'
+                    f'{problem["problem_id"]} : {bool(problem["is_correct"])} $ {problem["voted_answer"]} $ {problem["correct_ans"]} | {new_ans} $ {problem["round"]} $ {round(solution_time, 2)} (from previous run)'
                 )
+                category_time += solution_time  # ADDED: add to category time
                 continue
 
             # 2. solve the problem
@@ -289,6 +304,7 @@ class MathChat:
                     "total_q_count": result["total_q_count"],  # total number of queries
                     "messages": result["messages"],  # the conversation
                     "total_completion_tokens": result["total_completion_tokens"],
+                    "solution_time": result["solution_time"],
                 }
             )
             write_json(problem, problem_path)
@@ -297,13 +313,17 @@ class MathChat:
 
             # 4. continue to next problem
             correct_counts += problem["is_correct"]
+            solution_time = result["solution_time"] 
+            category_time += solution_time
             self.logger.log(
-                f'{problem["problem_id"]} : {bool(problem["is_correct"])} $ {problem["voted_answer"]} $ {problem["correct_ans"]} | {problem["new_ans"]} $ {problem["round"]} $'
+                f'{problem["problem_id"]} : {bool(problem["is_correct"])} $ {problem["voted_answer"]} $ {problem["correct_ans"]} | {problem["new_ans"]} $ {problem["round"]} $ {round(solution_time, 2)}'
             )
 
         tp = problem_set[0]["type"]
-        self.logger.log(f"{tp} Accuracy: {correct_counts}/{len(problem_set)} = {correct_counts/len(problem_set)}")
+        self.logger.log(f"{tp} Accuracy: {correct_counts}/{len(problem_set)} = {correct_counts/len(problem_set)} | Category Time: {round(category_time, 2)}s")
         self.logger.log("------------------------------------------------------------\n", verbose=True)
+        
+        return correct_counts, category_time
 
     def test_single_problem(self, problem_text, problem_type="Algebra", file_to_be_saved=None):
         """
