@@ -5,7 +5,7 @@ def main():
     # -----------------------------------------
     # Load credentials from JSON
     # -----------------------------------------
-    config_list = load_config('OAI_CONFIG_LIST.json')
+    config_list = load_config('./OAI_CONFIG_LIST/OAI_CONFIG_Mistral.json')
 
     setup_proxy()
 

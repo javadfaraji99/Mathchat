@@ -8,7 +8,7 @@ import copy
 from openai.error import InvalidRequestError, RateLimitError, Timeout
 from utils import write_json, remove_asy_sections, math_type_mapping, mylogger
 from prompts import PROMPTS
-
+import time
 
 class MathChat:
     def __init__(
@@ -100,6 +100,7 @@ class MathChat:
         rr = 0  # round
         total_completion_tokens = 0
         while rr < self.max_round:
+            time.sleep(30)
             # 1. get the response from the assistant, handle exceptions
             try:
                 if self.config_list is not None:
@@ -249,7 +250,7 @@ class MathChat:
         os.makedirs(saving_folder, exist_ok=True)
 
         # from the saving folder load solved problems
-        done_problems = set([int(f.split(".")[0]) for f in os.listdir(saving_folder) if "json" in f])
+        done_problems = set([int(f.split(".")[0].split('_')[-1]) for f in os.listdir(saving_folder) if "json" in f])
 
         correct_counts = 0
         self.logger.log("id : is_correct $ ans $ correct_ans | corrected_ans $ round")
@@ -257,7 +258,7 @@ class MathChat:
             problem_path = os.path.join(saving_folder, problem["problem_id"] + ".json")
 
             # 1. if problem already solved, continue
-            if int(problem["problem_id"]) in done_problems:
+            if int(problem["problem_id"].split('_')[-1]) in done_problems:
                 problem = json.load(open(problem_path, "r"))
                 correct_counts += problem["is_correct"]
                 new_ans = problem["new_ans"] if "new_ans" in problem else ""

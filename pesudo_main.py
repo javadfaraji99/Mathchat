@@ -2,12 +2,12 @@ import os
 from flaml import oai
 from math_chat import MathChat
 import argparse
-from utils import mylogger, load_level5_math_test_each_category, load_fixed, random_sample_MATH
+from utils import mylogger, load_level5_math_test_each_category, load_fixed, random_sample_MATH, load_config, setup_proxy, load_local_dataset
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Math mathchat_solver")
-    parser.add_argument("--prompt_type", "-ptype", dest="prompt_type", help="prompt type", default="select", type=str)
+    parser.add_argument("--prompt_type", "-ptype", dest="prompt_type", help="prompt type", default="v3.9python", type=str)
     parser.add_argument("--prompt_location", dest="prompt_location", help="prompt location", default="user", type=str)
     parser.add_argument("--max_round", dest="max_round", help="max round", default=15, type=int)
     parser.add_argument("--folder", "-f", dest="folder", help="saving folder", default="./autotools", type=str)
@@ -21,6 +21,8 @@ def parse_args():
     parser.add_argument("--refine", action="store_true")
     parser.add_argument("--sample_all", help="samples per category", default=0, type=int)
     parser.add_argument("-systype", dest="systype", help="system type", default="s0", type=str)
+    parser.add_argument("--dataset_folder", "-d", dest="dataset_folder", default="./math_dataset", help="path to dataset folder")
+    parser.add_argument("--config", "-cfg", dest="config", default="OAI_CONFIG_LIST.json", help="config file path")
     args = parser.parse_args()
     args.folder = (
         args.folder + args.systype + "_" + args.prompt_location + "_" + args.prompt_type + "_t" + str(args.temperature)
@@ -37,25 +39,33 @@ def parse_args():
 
 def pseudo_main(config_list):
     # 2. args, settings and logger
+    # print('hello')
     args = parse_args()
+    # set proxy if provided
+    setup_proxy()
+    # Load config if not provided
+    if config_list is None:
+        config_list = load_config(args.config)
+    
     args.model = "gpt-4"
     oai.ChatCompletion.request_timeout = 60 * 10  # 10 minutes
     oai.ChatCompletion.set_cache(seed=args.seed, cache_path_root=args.cache_folder)
     logger = mylogger(os.path.join(args.folder, "log.txt"))
 
     # 3. load math dataset
-    problem_sets = load_level5_math_test_each_category(
-        samples_per_category=args.samples_per_category, category_to_load=args.categories
-    )
-    if args.test_run:
-        problem_sets = load_level5_math_test_each_category(samples_per_category=1, category_to_load=args.categories)
-        logger.log("Take out 1 problem from each category for test run.")
+    # problem_sets = load_level5_math_test_each_category(
+    #     samples_per_category=args.samples_per_category, category_to_load=args.categories
+    # )
+    # if args.test_run:
+    #     problem_sets = load_level5_math_test_each_category(samples_per_category=1, category_to_load=args.categories)
+    #     logger.log("Take out 1 problem from each category for test run.")
 
-    if args.select:
-        problem_sets = load_fixed()
+    # if args.select:
+    #     problem_sets = load_fixed()
 
-    if args.sample_all != 0:
-        problem_sets = random_sample_MATH(args.sample_all)
+    # if args.sample_all != 0:
+    #     problem_sets = random_sample_MATH(args.sample_all)
+    problem_sets = load_local_dataset(args.dataset_folder)
 
     print(f"Running {args.folder}")
 
@@ -78,8 +88,6 @@ def pseudo_main(config_list):
         f.write(mathchat_solver.prompt)
 
     for problem_set in problem_sets:
-        for i in range(len(problem_set)):
-            problem_set[i]["problem_id"] = str(i)  # assign problem id
         if args.select:
             if problem_set[0]["type"] in selected_samples and len(selected_samples[problem_set[0]["type"]]) > 0:
                 problem_set = [problem_set[i] for i in selected_samples[problem_set[0]["type"]]]
@@ -91,3 +99,7 @@ def pseudo_main(config_list):
 
     logger.log("****************************\n\n\n\n\n", verbose=False)
     os.system("tar -czf " + args.folder + ".tar.gz " + args.folder)
+
+if __name__ == "__main__":
+    config_list = None
+    pseudo_main(config_list)
