@@ -119,11 +119,23 @@ class MathChat:
             except (RateLimitError, Timeout):
                 print("Ratelimit or timeout, retrying...", flush=True)
                 continue
-            
+            except Exception as e:
+                msg = str(e)
+
+                if (
+                    "list' object has no attribute 'get'" in msg
+                    or "Internal error encountered" in msg
+                ):
+                    print("Retrying after Google/FLAML error...")
+                    continue
+
+                raise        
             # Dynamic sleep after API call
             elapsed = time.time() - start_time
+            print(elapsed)
             if self.sleep_time > elapsed:
                 time.sleep(self.sleep_time - elapsed)
+                print('yes ', self.sleep_time - elapsed)
             start_time = time.time()
             
             try:
