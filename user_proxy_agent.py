@@ -267,6 +267,8 @@ class UserProxyAgent:
 
         # Input a string, extract the last line, enclose it in print() and return the new string
         lines = s.splitlines()
+        if len(lines) < 1:
+            return ' '
         last_line = lines[-1]
         if " = " in last_line:
             last_line = "print(" + last_line.split(" = ")[0] + ")"
