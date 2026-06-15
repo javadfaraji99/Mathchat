@@ -6,9 +6,10 @@ import json
 import re
 import copy
 from openai.error import InvalidRequestError, RateLimitError, Timeout
-from utils import write_json, remove_asy_sections, math_type_mapping, mylogger
+from utils import write_json, math_type_mapping, mylogger
 from prompts import PROMPTS
 import time
+import openai
 
 class MathChat:
     def __init__(
@@ -73,13 +74,13 @@ class MathChat:
         config = copy.deepcopy(self.deafult_config)
         problem_prompt = {
             "role": "user",
-            "content": self.prompt + "\nProblem: " + remove_asy_sections(problem["problem"]),
+            "content": self.prompt + "\nProblem: " + problem["problem"],
         }  # put prompt in user message
 
         # if the prompt_location is set to system, then the prompt is already put in the system message in __init__,
         # then we only need to put the problem in the user message
         if self.prompt_loaction == "system":
-            problem_prompt = {"role": "user", "content": remove_asy_sections(problem["problem"])}
+            problem_prompt = {"role": "user", "content": problem["problem"]}
         config["messages"].append(problem_prompt)
 
         # save a readable conversation in txt file
@@ -116,9 +117,33 @@ class MathChat:
                 print(problem["type"], problem["problem_id"], str(e), flush=True)
                 save_message_to_file(str(e))
                 break
-            except (RateLimitError, Timeout):
-                print("Ratelimit or timeout, retrying...", flush=True)
+            except Timeout:
+                print("timeout, retrying...", flush=True)
                 continue
+            except RateLimitError as e:
+                error_msg = str(e)
+                
+                if "Rate limit reached for model" in error_msg:
+                    # Token limit - need longer sleep or skip
+                    print("Token limit reached, skipping problem...")
+                    save_message_to_file(f"Token limit error: {error_msg}")
+                    is_valid_reply = False
+                    response_with_ans = ""
+                    response_with_new_ans = ""
+                    break 
+                if "Request too large for model" in error_msg:
+                    # Token limit - need longer sleep or skip
+                    print("Large request, skipping problem...")
+                    save_message_to_file(f"Token limit error: {error_msg}")
+                    is_valid_reply = False
+                    response_with_ans = ""
+                    response_with_new_ans = ""
+                    break               
+                else:
+                    # Other rate limit - can retry
+                    print("Rate limit, retrying...")
+                    time.sleep(60)
+                    continue
             except Exception as e:
                 msg = str(e)
 
@@ -132,21 +157,14 @@ class MathChat:
                 raise        
             # Dynamic sleep after API call
             elapsed = time.time() - start_time
-            print(elapsed)
             if self.sleep_time > elapsed:
                 time.sleep(self.sleep_time - elapsed)
-                print('yes ', self.sleep_time - elapsed)
             start_time = time.time()
             
             try:
                 total_completion_tokens += raw_responses["usage"]["completion_tokens"]
             except Exception:
                 pass
-            if raw_responses["usage"]["total_tokens"] >= 8000:
-                error_str = "Use more than 8000 many tokens, breaking."
-                print(error_str)
-                save_message_to_file(error_str)
-                break
 
             assert raw_responses != -1, "Error in getting response"
             responses = oai.ChatCompletion.extract_text(raw_responses)
@@ -156,6 +174,11 @@ class MathChat:
             save_message_to_file(f"assistant: {self.str_splitter(responses[0])}{seperate_line}")
             # token_used = raw_responses['usage']['total_tokens']
 
+            if raw_responses["usage"]["total_tokens"] >= 8000:
+                error_str = "Use more than 8000 many tokens, breaking."
+                print(error_str)
+                save_message_to_file(error_str)
+                break
             config["messages"].append({"role": "assistant", "content": responses[0]})
             tmp_msg = ""
 
