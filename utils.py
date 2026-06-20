@@ -133,6 +133,8 @@ def remove_asy_sections(input_string):
     output_string = re.sub(pattern, "", output_string, flags=re.DOTALL)
     pattern = r"\[ASY\](.*?)\[/ASY\]"
     output_string = re.sub(pattern, "", output_string, flags=re.DOTALL)
+    pattern = r"\\leavevmode\s*\\\\\s*\n\s*\\begin{asy}.*?\\end{asy}\s*\n\s*\\leavevmode\s*\\\\"
+    output_string = re.sub(pattern, "", output_string, flags=re.DOTALL)
     return output_string
 
 
