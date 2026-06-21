@@ -111,6 +111,7 @@ class MathChat:
                     raw_responses = oai.ChatCompletion.create(
                         config_list=self.config_list, **config, use_cache=self.use_cache
                     )
+                    # print(raw_responses)
                 else:
                     raw_responses = oai.ChatCompletion.create(None, **config, use_cache=self.use_cache)
             except InvalidRequestError as e:
@@ -173,7 +174,7 @@ class MathChat:
             # 2. process response
             save_message_to_file(f"assistant: {self.str_splitter(responses[0])}{seperate_line}")
             # token_used = raw_responses['usage']['total_tokens']
-
+            # print(raw_responses)
             if raw_responses["usage"]["total_tokens"] >= 8000:
                 error_str = "Use more than 8000 many tokens, breaking."
                 print(error_str)
@@ -217,6 +218,7 @@ class MathChat:
             config["messages"].append({"role": "user", "content": query_response})
 
             invalid_q = 0 if is_query_sucess else invalid_q + 1
+            # print(invalid_q)
             if invalid_q >= self.max_invalid_q_per_step:
                 assert config["messages"][-1]["role"] == "user", "The last message should be from user"
                 skip_query_str = "Please revisit the problem statement and your reasoning. If you think this step is correct, solve it yourself and continue the next step. Otherwise, correct this step."
@@ -325,6 +327,15 @@ class MathChat:
             )
             metrics = eval_math_responses([result["response_with_ans"]], problem["solution"])
 
+            if not metrics["success_vote"] and result["response_with_ans"] and problem["solution"]:
+                llm_verified = self.verify_with_llm(
+                    result["response_with_ans"], 
+                    problem["solution"],
+                )
+                if llm_verified:
+                    metrics["success_vote"] = True
+                    metrics["voted_answer"] = result["response_with_ans"]
+
             # 3. save the result
             correct_ans = get_answer(problem["solution"])
             problem.update(
@@ -380,3 +391,41 @@ class MathChat:
         
         # Call the existing conversation method
         return self.make_conversation(problem, file_to_be_saved=file_to_be_saved)
+    
+    def verify_with_llm(self, response, solution):
+        """Use LLM to verify if answer matches solution."""
+        
+        # Extract answers
+        model_answer = get_answer(response)
+        true_answer = get_answer(solution)
+        
+        if not model_answer or not true_answer:
+            return False
+ 
+        verify_prompt = f"""You are a math expert. Compare these two answers and determine if they are mathematically equivalent (including formatting variations).
+
+    Model answer: {model_answer}
+    Correct answer: {true_answer}
+
+    Are these answers equivalent? Respond ONLY with 'YES' or 'NO'."""
+
+        config = {
+            "messages": [
+                {"role": "system", "content": "You are a math verification expert."},
+                {"role": "user", "content": verify_prompt}
+            ],
+            "n": 1,
+            "temperature": 0.1
+        }
+        
+        try:
+            raw_response = oai.ChatCompletion.create(
+                config_list=self.config_list, 
+                **config, 
+                use_cache=self.use_cache
+            )
+            result = oai.ChatCompletion.extract_text(raw_response)[0]
+            return "YES" in result.upper()
+        except Exception as e:
+            print(f"LLM verification failed: {e}")
+            return False
