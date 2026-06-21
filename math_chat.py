@@ -179,6 +179,21 @@ class MathChat:
                 error_str = "Use more than 8000 many tokens, breaking."
                 print(error_str)
                 save_message_to_file(error_str)
+                error_file = os.path.join(os.path.dirname(file_to_be_saved), "token_limit_errors.json")
+                
+                if os.path.exists(error_file):
+                    with open(error_file, "r") as f:
+                        errors = json.load(f)
+                else:
+                    errors = {}
+
+                category = problem.get("type", "Unknown")
+                if category not in errors:
+                    errors[category] = []
+                errors[category].append(problem["problem_id"])
+                
+                with open(error_file, "w") as f:
+                    json.dump(errors, f, indent=2)
                 break
             config["messages"].append({"role": "assistant", "content": responses[0]})
             tmp_msg = ""
