@@ -1,0 +1,126 @@
+aiohttp==3.8.4
+aiosignal==1.3.1
+alembic==1.10.3
+asttokens @ file:///croot/asttokens_1743630435401/work
+async-timeout==4.0.2
+attrs==22.2.0
+autopage==0.5.1
+backcall @ file:///C:/miniconda3/conda-bld/backcall_1761744905541/work
+cachetools==6.2.4
+certifi @ file:///home/task_175978575413734/conda-bld/certifi_1759786089495/work/certifi
+cfgv==3.4.0
+charset-normalizer==3.1.0
+cliff==4.2.0
+cmaes==0.9.1
+cmd2==2.4.3
+colorlog==6.7.0
+comm @ file:///croot/comm_1709322850197/work
+cvxpy==1.3.1
+datasets==2.11.0
+debugpy @ file:///home/task_175706710612866/conda-bld/debugpy_1757067121768/work
+decorator @ file:///home/task_175734045313089/conda-bld/decorator_1757341231509/work
+dill==0.3.6
+diskcache==5.5.1
+distlib==0.4.0
+dotenv==0.9.9
+ecos==2.0.12
+exceptiongroup @ file:///home/task_176156032772379/conda-bld/exceptiongroup_1761560339718/work
+executing @ file:///home/task_175706092299047/conda-bld/executing_1757061229711/work
+filelock==3.19.1
+FLAML==1.2.4
+frozenlist==1.3.3
+fsspec==2023.4.0
+func-timeout==4.3.5
+google-ai-generativelanguage==0.6.15
+google-api-core==2.28.1
+google-api-python-client==2.187.0
+google-auth==2.45.0
+google-auth-httplib2==0.3.0
+google-generativeai==0.8.6
+googleapis-common-protos==1.72.0
+greenlet==2.0.2
+grpcio==1.76.0
+grpcio-status==1.71.2
+httplib2==0.31.0
+huggingface-hub==0.13.4
+identify==2.6.15
+idna==3.4
+importlib_metadata @ file:///croot/importlib_metadata-suite_1732633488278/work
+ipykernel @ file:///home/task_175758287195775/conda-bld/ipykernel_1757583365701/work
+ipython @ file:///croot/ipython_1694181358621/work
+jaraco.context==4.3.0
+jedi @ file:///croot/jedi_1733987392413/work
+joblib==1.2.0
+jupyter_client @ file:///croot/jupyter_client_1737570961872/work
+jupyter_core @ file:///croot/jupyter_core_1751991368470/work
+lightgbm==3.3.5
+Mako==1.2.4
+MarkupSafe==2.1.2
+matplotlib-inline @ file:///home/task_175852012146634/conda-bld/matplotlib-inline_1758520135718/work
+more-itertools==9.1.0
+mpmath==1.3.0
+multidict==6.0.4
+multiprocess==0.70.14
+nest-asyncio @ file:///croot/nest-asyncio_1708532673751/work
+nodeenv==1.10.0
+numpy==1.24.2
+nvidia-nccl-cu12==2.28.9
+openai==0.27.4
+optuna==2.8.0
+osqp==0.6.2.post9
+packaging @ file:///home/task_176104876094959/conda-bld/packaging_1761049077121/work
+pandas==2.0.0
+parso @ file:///croot/parso_1733963305961/work
+pbr==5.11.1
+pexpect @ file:///croot/pexpect_1750072593878/work
+pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+platformdirs==4.4.0
+pre-commit==3.2.2
+prettytable==3.7.0
+prompt_toolkit @ file:///home/task_176174484479439/conda-bld/prompt-toolkit_1761744858055/work
+proto-plus==1.27.0
+protobuf==5.29.5
+psutil @ file:///home/task_176189642196610/conda-bld/psutil_1761896461067/work
+ptyprocess @ file:///opt/miniconda3/conda-bld/ptyprocess_1762424170819/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl#sha256=3470be7f810474c8a2ecfcd6e02acc6aea8483ab595417fa4e336362a349933e
+pure_eval @ file:///home/task_175706679215407/conda-bld/pure_eval_1757067048166/work
+pyarrow==11.0.0
+pyasn1==0.6.1
+pyasn1_modules==0.4.2
+pydantic==1.10.7
+Pygments @ file:///croot/pygments_1744664109463/work
+pyparsing==3.3.1
+pyperclip==1.8.2
+python-dateutil @ file:///croot/python-dateutil_1716495738603/work
+python-dotenv==1.2.1
+pytz==2023.3
+PyYAML==6.0
+pyzmq @ file:///home/task_175810350423983/conda-bld/pyzmq_1758103934837/work
+qdldl==0.1.7
+regex==2023.3.23
+requests==2.28.2
+responses==0.18.0
+rsa==4.9.1
+scikit-learn==1.2.2
+scipy==1.10.1
+scs==3.2.3
+six @ file:///croot/six_1744271502820/work
+SQLAlchemy==2.0.9
+stack_data @ file:///home/task_175706614279725/conda-bld/stack_data_1757067036628/work
+stevedore==5.0.0
+sympy==1.11.1
+threadpoolctl==3.1.0
+tornado @ file:///croot/tornado_1748956929273/work
+tqdm==4.65.0
+traitlets @ file:///croot/traitlets_1718227057033/work
+typing_extensions @ file:///croot/typing_extensions_1756280817316/work
+tzdata==2023.3
+uritemplate==4.2.0
+urllib3==1.26.15
+virtualenv==20.33.1
+wcwidth @ file:///croot/wcwidth_1750352883074/work
+wolframalpha==5.0.0
+xgboost==2.1.4
+xmltodict==0.13.0
+xxhash==3.2.0
+yarl==1.8.2
+zipp @ file:///croot/zipp_1732630741423/work
