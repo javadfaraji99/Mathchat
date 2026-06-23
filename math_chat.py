@@ -185,12 +185,14 @@ class MathChat:
                     with open(error_file, "r") as f:
                         errors = json.load(f)
                 else:
-                    errors = {}
+                    errors = {"questions": {}, "count": {}}
 
                 category = problem.get("type", "Unknown")
-                if category not in errors:
-                    errors[category] = []
-                errors[category].append(problem["problem_id"])
+                if category not in errors["questions"]:
+                    errors["questions"][category] = []
+                    errors["count"][category] = 0
+                errors["questions"][category].append(problem["problem_id"])
+                errors["count"][category] += 1
                 
                 with open(error_file, "w") as f:
                     json.dump(errors, f, indent=2)
@@ -314,10 +316,20 @@ class MathChat:
         os.makedirs(saving_folder, exist_ok=True)
 
         # from the saving folder load solved problems
-        done_problems = set([int(f.split(".")[0].split('_')[-1]) for f in os.listdir(saving_folder) if "json" in f])
+        # done_problems = set([int(f.split(".")[0].split('_')[-1]) for f in os.listdir(saving_folder) if "json" in f])
+        done_problems = set()
+        for f in os.listdir(saving_folder):
+            if "json" in f:
+                try:
+                    problem_num = int(f.split(".")[0].split('_')[-1])
+                    done_problems.add(problem_num)
+                except ValueError:
+                    # Skip this file if conversion to int fails
+                    continue
 
         correct_counts = 0
         category_time = 0
+        llm_verified_data = {"questions": {}, "count": {}}
         self.logger.log("id : is_correct $ ans $ correct_ans | corrected_ans $ round $ time(s)")
         for count, problem in enumerate(problem_set):
             problem_path = os.path.join(saving_folder, problem["problem_id"] + ".json")
@@ -343,13 +355,38 @@ class MathChat:
             metrics = eval_math_responses([result["response_with_ans"]], problem["solution"])
 
             if not metrics["success_vote"] and result["response_with_ans"] and problem["solution"]:
+                llm_start = time.time()
                 llm_verified = self.verify_with_llm(
                     result["response_with_ans"], 
                     problem["solution"],
                 )
+                llm_elapsed = time.time() - llm_start
+
+                if self.sleep_time > llm_elapsed:
+                    time.sleep(self.sleep_time - llm_elapsed)
+                
                 if llm_verified:
                     metrics["success_vote"] = True
                     metrics["voted_answer"] = result["response_with_ans"]
+                    
+                    llm_file = os.path.join(saving_folder, "llm_verified.json")
+                    
+                    # Load existing if any
+                    if os.path.exists(llm_file):
+                        with open(llm_file, "r") as f:
+                            existing_data = json.load(f)
+                    else:
+                        existing_data = {"questions": {}, "count": {}}
+                    
+                    category = problem.get("type", "Unknown")
+                    if category not in existing_data["questions"]:
+                        existing_data["questions"][category] = []
+                        existing_data["count"][category] = 0
+                    existing_data["questions"][category].append(problem["problem_id"])
+                    existing_data["count"][category] += 1
+                    
+                    with open(llm_file, "w") as f:
+                        json.dump(existing_data, f, indent=2)
 
             # 3. save the result
             correct_ans = get_answer(problem["solution"])
