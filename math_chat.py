@@ -330,7 +330,7 @@ class MathChat:
         correct_counts = 0
         category_time = 0
         llm_verified_data = {"questions": {}, "count": {}}
-        self.logger.log("id : is_correct $ ans $ correct_ans | corrected_ans $ round $ time(s)")
+        self.logger.log("id : is_correct $ ans $ correct_ans $ corrected_ans $ round $ time(s)")
         for count, problem in enumerate(problem_set):
             problem_path = os.path.join(saving_folder, problem["problem_id"] + ".json")
 
@@ -343,7 +343,7 @@ class MathChat:
                     problem["new_ans"] = "same"
                 solution_time = problem.get("solution_time", 0)
                 self.logger.log(
-                    f'{problem["problem_id"]} : {bool(problem["is_correct"])} $ {problem["voted_answer"]} $ {problem["correct_ans"]} | {new_ans} $ {problem["round"]} $ {round(solution_time, 2)} (from previous run)'
+                    f'{problem["problem_id"]} : {bool(problem["is_correct"])} $ {problem["voted_answer"]} $ {problem["correct_ans"]} $ {new_ans} $ {problem["round"]} $ {round(solution_time, 2)} (from previous run)'
                 )
                 category_time += solution_time  # ADDED: add to category time
                 continue
@@ -414,7 +414,7 @@ class MathChat:
             solution_time = result["solution_time"] 
             category_time += solution_time
             self.logger.log(
-                f'{problem["problem_id"]} : {bool(problem["is_correct"])} $ {problem["voted_answer"]} $ {problem["correct_ans"]} | {problem["new_ans"]} $ {problem["round"]} $ {round(solution_time, 2)}'
+                f'{problem["problem_id"]} : {bool(problem["is_correct"])} $ {problem["voted_answer"]} $ {problem["correct_ans"]} $ {problem["new_ans"]} $ {problem["round"]} $ {round(solution_time, 2)}'
             )
 
         tp = problem_set[0]["type"]
