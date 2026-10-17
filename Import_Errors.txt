@@ -1,0 +1,83 @@
+100: ImportError: cannot import name 'Fraction' from 'sympy' 
+
+55: ImportError: cannot import name 'comb' from 'sympy' 
+
+43: ImportError: cannot import name 'Fraction' from 'sympy' 
+40: ImportError: cannot import name 'combinations' from 'sympy' 
+
+15: ImportError: cannot import name 'solve_uniset' from 'sympy' 
+4: ImportError: cannot import name 'comb' from 'sympy' 
+3: ImportError: cannot import name 'combinations' from 'sympy' 
+3: ImportError: cannot import name 'combinations_count' from 'sympy' 
+
+3: ImportError: cannot import name 'stirling' from 'sympy' 
+
+3: ImportError: cannot import name 'maximize' from 'sympy' 
+
+3: ImportError: cannot import name 'minimize' from 'sympy' 
+
+2: ImportError: cannot import name 'Decimal' from 'sympy' 
+2: ImportError: cannot import name 'combinations_count' from 'sympy' 
+2: ImportError: cannot import name 'round' from 'sympy' 
+2: ImportError: cannot import name 'solve_uniset' from 'sympy' 
+
+2: ImportError: cannot import name 'Vector' from 'sympy' 
+2: ImportError: cannot import name 'linear_congruence' from 'sympy.solvers.diophantine' 
+
+2: ImportError: cannot import name 'solve_unisimplex' from 'sympy' 
+1: ImportError: cannot import name 'ceil' from 'sympy' 
+
+1: ImportError: cannot import name 'NTherapy' from 'sympy' 
+1: ImportError: cannot import name 'Rotation' from 'sympy' 
+
+1: ImportError: cannot import name 'Vector' from 'sympy' 
+
+1: ImportError: cannot import name 'partitions' from 'sympy' 
+
+1: ImportError: cannot import name 'LagrangeMultiplier' from 'sympy' 
+
+1: ImportError: cannot import name 'sum_polynomial' from 'sympy' 
+
+1: ImportError: cannot import name 'sum_sum' from 'sympy' 
+
+1: ImportError: cannot import name 'sum' from 'sympy' 
+
+1: ImportError: cannot import name 'length' from 'sympy' 
+
+1: ImportError: cannot import name 'min' from 'sympy' 
+
+1: ImportError: cannot import name 'issquare' from 'sympy' 
+
+1: ImportError: cannot import name 'issquare' from 'sympy.ntheory' 
+
+1: ImportError: cannot import name 'cross_product' from 'sympy' 
+1: ImportError: cannot import name 'line_between_two_points' from 'sympy' 
+1: ImportError: cannot import name 'sum_expr' from 'sympy' 
+1: ImportError: cannot import name 'tau' from 'sympy' 
+
+1: ImportError: cannot import name 'digits' from 'sympy' 
+
+1: ImportError: cannot import name 'chinese_remainder' from 'sympy.ntheory' 
+
+1: ImportError: cannot import name 'nt_theory' from 'sympy' 
+
+1: ImportError: cannot import name 'mod' from 'sympy' 
+
+1: ImportError: cannot import name 'is_squarefree' from 'sympy' 
+
+1: ImportError: cannot import name 'divisors_count' from 'sympy' 
+
+1: ImportError: cannot import name 'solve_congruence' from 'sympy' 
+
+1: ImportError: cannot import name 'powmod' from 'sympy' 
+
+1: ImportError: cannot import name 'bin' from 'sympy' 
+
+1: ImportError: cannot import name 'UnionSet' from 'sympy' 
+1: ImportError: cannot import name 'inequalities' from 'sympy' 
+1: ImportError: cannot import name 'set' from 'sympy' 
+1: ImportError: cannot import name 'maximize' from 'sympy' 
+1: ImportError: cannot import name 'ScientificNotation' from 'sympy' 
+1: ImportError: cannot import name 'minimize_expr' from 'sympy' 
+1: ImportError: cannot import name 'inequality_solve' from 'sympy' 
+1: ImportError: cannot import name 'ceil' from 'sympy' 

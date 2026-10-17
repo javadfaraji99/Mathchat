@@ -1,0 +1,1750 @@
+{
+  "question_6019": [
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_19edb676b66b5b8a890c7942bc2d35e3.py\", line 44\n    if (y + s, x + i, x + i + 1) not in h_edges: possible = False\nIndentationError: unexpected indent",
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_4861070829cad1430d7f2a49fe381263.py\", line 30\n    if (y+s, x+i, x+i+1) not in h_edges: possible = False\nIndentationError: unexpected indent"
+  ],
+  "question_5872": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11629": [
+    "Error: Traceback (most recent call last):\n      sol_a = sp.nsolve(eq, a, 5)\n      return func(*args, **kwargs)\n      x = sympify(findroot(f, x0, **kwargs))\n      raise ValueError('Could not find root within given tolerance. '\nValueError: Could not find root within given tolerance. (48.7938733131738077725 > 2.16840434497100886801e-19)\nTry another starting point or tweak arguments."
+  ],
+  "question_5817": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11413": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6158": [
+    "Error: Traceback (most recent call last):\n      area = A.triangle_area(B, C)\nAttributeError: 'Point2D' object has no attribute 'triangle_area'"
+  ],
+  "question_5663": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6049": [
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_99a7943352dfb01c2e399057a7cd3d05.py\", line 7\n    expr = x - 2*(1 + x) + 3*(1 - x) - 4*(1 + 2x) # Wait, 2x needs to be 2*x\n                                               ^\nSyntaxError: invalid syntax"
+  ],
+  "question_5954": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5959": [
+    "Error: Traceback (most recent call last):\n      aod = solution[0][0] + solution[0][1] + solution[0][2]\nKeyError: 0"
+  ],
+  "question_5596": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11324": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      price_per_oz_smaller = price_per_oz_larger * Fraction('125', '100')\n      raise TypeError(\"both arguments should be \"\nTypeError: both arguments should be Rational instances"
+  ],
+  "question_11879": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5660": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6540": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations\nImportError: cannot import name 'combinations' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11554": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6137": [
+    "Error: Traceback (most recent call last):\n      from sympy import Decimal\nImportError: cannot import name 'Decimal' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5703": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5923": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5744": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11926": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11725": [
+    "Error: Traceback (most recent call last):\n      from sympy import ceil\nImportError: cannot import name 'ceil' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11648": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6484": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11087": [
+    "Error: Traceback (most recent call last):\n      cos_theta = vec_AB.dot(vec_AC) / (vec_AB.norm() * vec_AC.norm())\nAttributeError: 'Point2D' object has no attribute 'norm'"
+  ],
+  "question_5583": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6354": [
+    "Error: Traceback (most recent call last):\n      cos_BPC = PB.dot(PC) / (PB.norm() * PC.norm())\nAttributeError: 'Point2D' object has no attribute 'norm'"
+  ],
+  "question_11297": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11877": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6341": [
+    "Error: Traceback (most recent call last):\n      cos_theta = vec_AC.dot(vec_AD) / (vec_AC.norm() * vec_AD.norm())\nAttributeError: 'Point2D' object has no attribute 'norm'"
+  ],
+  "question_11480": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11564": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11768": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations_count\nImportError: cannot import name 'combinations_count' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6467": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11500": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6361": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11934": [
+    "Error: Traceback (most recent call last):\n      from sympy import NTherapy # Not needed, just a simple loop or known triple\nImportError: cannot import name 'NTherapy' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5830": [
+    "Error: Traceback (most recent call last):\n      cos_E = vector_EA.dot(vector_ED) / (vector_EA.norm() * vector_ED.norm())\nAttributeError: 'Point2D' object has no attribute 'norm'"
+  ],
+  "question_11634": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11909": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6648": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations\nImportError: cannot import name 'combinations' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6548": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5609": [
+    "Error: Traceback (most recent call last):\n      print(solution[0][0])\nKeyError: 0",
+    "Error: Traceback (most recent call last):\n      print(solution[0][S])\nKeyError: 0"
+  ],
+  "question_11824": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11514": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6716": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5945": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11664": [
+    "Error: Traceback (most recent call last):\n      a = simplified_expr.as_coeff_of(sp.sqrt(21))\nAttributeError: 'Mul' object has no attribute 'as_coeff_of'"
+  ],
+  "question_5938": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6704": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6440": [
+    "Error: Traceback (most recent call last):\n      from sympy import Rational, round\nImportError: cannot import name 'round' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11223": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11250": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6497": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations_count\nImportError: cannot import name 'combinations_count' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11598": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_11871": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations\nImportError: cannot import name 'combinations' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6526": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3261": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2976": [
+    "Error: Timeout"
+  ],
+  "question_2834": [
+    "Error: Traceback (most recent call last):\n      area_ghi = sp.Triangle(G, H, I).area()\nTypeError: 'Mul' object is not callable"
+  ],
+  "question_3108": [
+    "Error: Traceback (most recent call last):\n      BF = abs(sol[0][1]) if isinstance(sol, list) else abs(sol[1])\nKeyError: 1"
+  ],
+  "question_3331": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9558": [
+    "Error: Traceback (most recent call last):\n      hx, hy = sol[0][0], sol[0][1]\nKeyError: 0"
+  ],
+  "question_9619": [
+    "Error: Traceback (most recent call last):\n      cos_theta = XP.dot(XS) / (XP.norm() * XS.norm())\nAttributeError: 'Point2D' object has no attribute 'norm'"
+  ],
+  "question_9510": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9345": [
+    "Error: Traceback (most recent call last):\n      sol = sp.solve(sp.Eq(area_ADP, target_area), t)\n      raise NotImplementedError('solving %s when the argument '\nNotImplementedError: solving Abs(t) when the argument is not real or imaginary."
+  ],
+  "question_9600": [
+    "Error: Traceback (most recent call last):\n      sol = sp.solve(eq, R)\n      raise NotImplementedError('solving %s when the argument '\nNotImplementedError: solving Abs(sqrt(R**2 - 49) - sqrt(R**2 - 25)) when the argument is not real or imaginary."
+  ],
+  "question_3006": [
+    "Error: Traceback (most recent call last):\n      print(f\"Max p+q: {max(results)}\")\nValueError: max() arg is an empty sequence",
+    "Error: Traceback (most recent call last):\n      p1 = solve(expr_inside == 140, p)[0]\nIndexError: list index out of range"
+  ],
+  "question_3383": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_c98eb7b249ea7c0e2fcc535bd8036f72.py\", line 8\n    I'll use sympy's sqrt\n     ^\nSyntaxError: invalid syntax"
+  ],
+  "question_9579": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_97b0e7012d0b5afc4728388c690844e9.py\", line 52\n    \n    ^\nSyntaxError: unexpected EOF while parsing\n\n2*sqrt(106)\n\n2*sqrt(106)"
+  ],
+  "question_2690": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9429": [
+    "Error: Traceback (most recent call last):\n      ratio_adc_abc = sp.Fraction(b, b + c)\nAttributeError: module 'sympy' has no attribute 'Fraction'"
+  ],
+  "question_3053": [
+    "Error: Traceback (most recent call last):\n      eq = (A_coord - C_coord).norm_sq() - (A_coord - R_coord).norm_sq()\nAttributeError: 'Point2D' object has no attribute 'norm_sq'",
+    "Error: Traceback (most recent call last):\n      eq = (A_coord - C_coord).length()**2 - (A_coord - R_coord).length()**2\nTypeError: 'Zero' object is not callable"
+  ],
+  "question_2546": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3012": [
+    "Error: Traceback (most recent call last):\n      m_val = sp.solve(eq2 - eq1, m)[0]\nTypeError: unsupported operand type(s) for -: 'Equality' and 'Equality'"
+  ],
+  "question_2553": [
+    "Error: Traceback (most recent call last):\n      b2 = sol[0][0]\nKeyError: 0"
+  ],
+  "question_3031": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3005": [
+    "Error: Traceback (most recent call last):\n      eq = sp.Eq(B.distance_sq(F), B_prime.distance_sq(F))\nAttributeError: 'Point2D' object has no attribute 'distance_sq'",
+    "Error: Traceback (most recent call last):\n      print(f\"m+n = {m_n.numerator + m_n.denominator}\")\nAttributeError: 'tuple' object has no attribute 'numerator'"
+  ],
+  "question_9453": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3324": [
+    "Error: Traceback (most recent call last):\n      area_BQW = Point(B).triangle_area(Q, W)\nAttributeError: 'Point2D' object has no attribute 'triangle_area'"
+  ],
+  "question_2907": [
+    "Error: Traceback (most recent call last):\n      cos_theta = AG.dot(AC) / (AG.norm() * AC.norm())\nAttributeError: 'Point3D' object has no attribute 'norm'"
+  ],
+  "question_3176": [
+    "Error: Traceback (most recent call last):\n      area = sp.geometry.triangle.Triangle(K, D, C).area()\nAttributeError: module 'sympy.geometry' has no attribute 'triangle'"
+  ],
+  "question_9568": [
+    "Error: Traceback (most recent call last):\n      normal = MN.cross(MQ)\nAttributeError: 'Point3D' object has no attribute 'cross'"
+  ],
+  "question_3019": [
+    "Error: Traceback (most recent call last):\n      EF_sq = (E - F).norm()**2\nAttributeError: 'Point2D' object has no attribute 'norm'"
+  ],
+  "question_2973": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3077": [
+    "Error: Traceback (most recent call last):\n      area1 = integrate(1 - (Rational(1, 2)*x + Rational(1, 16)), (x, Rational(5, 8), 1))\nNameError: name 'x' is not defined"
+  ],
+  "question_2941": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9177": [
+    "Error: Traceback (most recent call last):\n      result = percent.evalf(digits=4)\nTypeError: evalf() got an unexpected keyword argument 'digits'"
+  ],
+  "question_9325": [
+    "Error: Traceback (most recent call last):\n      print(f\"Center (h, k): ({sol[h]}, {sol[k]})\")\nTypeError: list indices must be integers or slices, not Symbol"
+  ],
+  "question_3304": [
+    "Error: Traceback (most recent call last):\n      a_val = sol_a[0]\nIndexError: list index out of range",
+    "Error: Traceback (most recent call last):\n      x_val = [r for r in roots if r.evalf() > 1][0]\n      x_val = [r for r in roots if r.evalf() > 1][0]\n      return func(self, other)\n      return StrictGreaterThan(self, other)\n      raise TypeError(\"Invalid comparison of non-real %s\" % me)\nTypeError: Invalid comparison of non-real -0.517638090205041 - 0.e-22*I"
+  ],
+  "question_2520": [
+    "Error: Traceback (most recent call last):\n      area_bottom = sp.Polygon(A, B, P2, P1).area()\nTypeError: 'Add' object is not callable"
+  ],
+  "question_2959": [
+    "Error: Traceback (most recent call last):\n      base_area = sp.abs((P.x*(Q.y - R.y) + Q.x*(R.y - P.y) + R.x*(P.y - Q.y)) / 2)\nAttributeError: module 'sympy' has no attribute 'abs'"
+  ],
+  "question_3296": [
+    "Error: Traceback (most recent call last):\n      mB_val = sol[0][0]\nKeyError: 0"
+  ],
+  "question_2998": [
+    "Error: Traceback (most recent call last):\n      k_rational = Rational(k).limit() # simplify to fraction\nTypeError: limit() missing 2 required positional arguments: 'x' and 'xlim'"
+  ],
+  "question_9561": [
+    "Error: Traceback (most recent call last):\n      from sympy import Point, Rotation\nImportError: cannot import name 'Rotation' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3275": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_04cbe2e4eb2f3407715a9403755418d5.py\", line 20\n    s - (s+x)/2 = (x/(s-x)) * (X_int - x/2)\n    ^\nSyntaxError: cannot assign to operator"
+  ],
+  "question_3083": [
+    "Error: Traceback (most recent call last):\n      area = sp.abs(M_val.x * (O.y - I.y) + O.x * (I.y - M_val.y) + I.x * (M_val.y - O.y)) / 2\nAttributeError: module 'sympy' has no attribute 'abs'"
+  ],
+  "question_3318": [
+    "Error: Traceback (most recent call last):\n      solutions = sp.solve(equation, p)\n      raise NotImplementedError('solving %s when the argument '\nNotImplementedError: solving Abs(10*p - 144) when the argument is not real or imaginary."
+  ],
+  "question_3255": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2683": [
+    "Error: Traceback (most recent call last):\n      sol = solve([eq1, eq2], (m, b))\n      raise NotImplementedError('solving %s when the argument '\nNotImplementedError: solving Abs(b + 2*m) when the argument is not real or imaginary."
+  ],
+  "question_3107": [
+    "Error: Traceback (most recent call last):\n      x = sol[0][s3]\nTypeError: tuple indices must be integers or slices, not Symbol"
+  ],
+  "question_2820": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9366": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2536": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3082": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_ce7d8697aac936b9cebbaba9e8000592.py\", line 36\n    \n    ^\nSyntaxError: unexpected EOF while parsing",
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_65439162de55c6e0bdcae79f8f29528b.py\", line 31\n    \n    ^\nSyntaxError: unexpected EOF while parsing"
+  ],
+  "question_3090": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_f87b9ec834caedf470f2d72c1c647c9c.py\", line 29\n    \n    ^\nSyntaxError: unexpected EOF while parsing"
+  ],
+  "question_9267": [
+    "Error: Traceback (most recent call last):\n      theta_sol = sp.nsolve(eq2, theta, sp.rad(20))\n      return func(*args, **kwargs)\n      x = sympify(findroot(f, x0, **kwargs))\n      x0 = [ctx.convert(x0)]\n      return ctx._convert_fallback(x, strings)\n      raise TypeError(\"cannot create mpf from \" + repr(x))\nTypeError: cannot create mpf from pi/9",
+    "Error: Traceback (most recent call last):\n      theta_val = sp.nsolve(eq2, theta, sp.rad(20))\n      return func(*args, **kwargs)\n      x = sympify(findroot(f, x0, **kwargs))\n      x0 = [ctx.convert(x0)]\n      return ctx._convert_fallback(x, strings)\n      raise TypeError(\"cannot create mpf from \" + repr(x))\nTypeError: cannot create mpf from pi/9"
+  ],
+  "question_3146": [
+    "Error: Timeout",
+    "Error: Timeout\nYour query or result is same from the last, please try a new approach."
+  ],
+  "question_3067": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_44300bb520a4bdcc37ccf909decbf622.py\", line 40\n    \n    ^\nSyntaxError: unexpected EOF while parsing"
+  ],
+  "question_3378": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3096": [
+    "Error: Traceback (most recent call last):\n      critical_points = sp.solve(diff_tan, a)\n      solution = _solve(f[0], *symbols, **flags)\n      candidates = _solve(expr, symbol, **flags)\n      raise NotImplementedError('\\n'.join([msg, not_impl_msg % f]))\nNotImplementedError: multiple generators [a, sign(2*a**2 - 3*a + 4)]\nNo algorithms are implemented to solve equation -sqrt(3)*a*(4*a - 3)*sign(2*a**2 - 3*a + 4)/(2*a**2 - 3*a + 4)**2 + sqrt(3)/(2*a**2 - 3*a + 4)"
+  ],
+  "question_3312": [
+    "Error: Traceback (most recent call last):\n      integrate(1, (x, max(z, 1-z), 1)), # This is problematic with max/min in sympy\n      raise TypeError(\"cannot determine truth value of Relational\")\nTypeError: cannot determine truth value of Relational"
+  ],
+  "question_3052": [
+    "Error: Traceback (most recent call last):\n      cross_prod = v1.cross(v2)\nAttributeError: 'Point3D' object has no attribute 'cross'"
+  ],
+  "question_2966": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3274": [
+    "Error: Traceback (most recent call last):\n      cos_theta = AH.dot(AC) / (AH.norm() * AC.norm())\nAttributeError: 'Point3D' object has no attribute 'norm'"
+  ],
+  "question_2668": [
+    "Error: Traceback (most recent call last):\n      print(solution[0][0])\nKeyError: 0",
+    "Error: Traceback (most recent call last):\n      if isinstance(solution[0], dict):\nKeyError: 0"
+  ],
+  "question_2949": [
+    "Error: Traceback (most recent call last):\n      ab_val = sol[0][0] * sol[0][1]\nKeyError: 0",
+    "Error: Traceback (most recent call last):\n      if isinstance(sol[0], tuple):\nKeyError: 0"
+  ],
+  "question_3047": [
+    "Error: Traceback (most recent call last):\n      cos_theta = PO1.dot(PO2) / (PO1.norm() * PO2.norm())\nAttributeError: 'Point2D' object has no attribute 'norm'"
+  ],
+  "question_2934": [
+    "Error: Traceback (most recent call last):\n      A, B, C = line_PS.A, line_PS.B, line_PS.C\nAttributeError: 'Line2D' object has no attribute 'A'"
+  ],
+  "question_3004": [
+    "Error: Traceback (most recent call last):\n      area_ebd = sp.abs(sp.Polygon(B, E, D).area)\nAttributeError: module 'sympy' has no attribute 'abs'"
+  ],
+  "question_3315": [
+    "30*sqrt(11)\n\nError:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_2947723e2d0306694caf6fd1b34222c0.py\", line 11\n    \n    ^\nSyntaxError: unexpected EOF while parsing"
+  ],
+  "question_2771": [
+    "Error: Traceback (most recent call last):\n      coords = [p1[0], p2[0], p3[0]]\nKeyError: 0",
+    "Error: Traceback (most recent call last):\n      pts.append(sol[0])\nKeyError: 0"
+  ],
+  "question_9237": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3025": [
+    "Error: Traceback (most recent call last):\n      print(sp.Rational(de_length).limit())\nTypeError: limit() missing 2 required positional arguments: 'x' and 'xlim'"
+  ],
+  "question_3097": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3182": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_5e4f536644b113cc7eafa18042d695c3.py\", line 32\n    \n    ^\nSyntaxError: unexpected EOF while parsing"
+  ],
+  "question_3104": [
+    "Error: Traceback (most recent call last):\n      area = sp.Polygon(*points).area()\nTypeError: 'Rational' object is not callable"
+  ],
+  "question_3000": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2687": [
+    "Error: Traceback (most recent call last):\n      area_ABC = sp.Triangle(A, B, C).area()\nTypeError: 'Pow' object is not callable"
+  ],
+  "question_9580": [
+    "Error: Traceback (most recent call last):\n      perimeter = s1 + s2 + s3 + s4 + s5 + s6 + sol[0][0] + sol[0][1]\nKeyError: 0"
+  ],
+  "question_9190": [
+    "Error: Traceback (most recent call last):\n      sum_sides = sol[0][0] + sol[0][1]\nKeyError: 0"
+  ],
+  "question_9209": [
+    "Error: Traceback (most recent call last):\n      cos_theta = MA.dot(MB) / (MA.norm() * MB.norm())\nAttributeError: 'Point3D' object has no attribute 'norm'"
+  ],
+  "question_2951": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_226dd35ea43963987541bea3168a2a14.py\", line 42\n    \n    ^\nSyntaxError: unexpected EOF while parsing"
+  ],
+  "question_9567": [
+    "Error: Traceback (most recent call last):\n      area = sp.abs((E.x*(D.y - C.y) + D.x*(C.y - E.y) + C.x*(E.y - D.y)) / 2)\nAttributeError: module 'sympy' has no attribute 'abs'"
+  ],
+  "question_2580": [
+    "Error: Traceback (most recent call last):\n      equation = Rational(2*x, 10) - (7 - x) / 7\n      retval = cfunc(*args, **kwargs)\n      p = Rational(p)\n      retval = cfunc(*args, **kwargs)\n      raise TypeError('invalid input: %s' % p)\nTypeError: invalid input: 2*x"
+  ],
+  "question_3080": [
+    "Error: Traceback (most recent call last):\n      y_sol = sp.solve(eq, y)\n      solution = _solve(f[0], *symbols, **flags)\n      result.add(Piecewise(\n      r = cls.eval(*newargs)\n      cond = cond.replace(\n      rv = walk(self, rec_replace)\n      rv = F(rv)\n      v = _value(expr, result)\n      _value = lambda expr, result: value(expr)\n      return rel.func(lhs, rhs)\n      raise TypeError(\"Invalid comparison of non-real %s\" % me)\nTypeError: Invalid comparison of non-real 2.0 - 0.e-7*I"
+  ],
+  "question_9636": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9530": [
+    "Error: Traceback (most recent call last):\n      from sympy import Point3D, Vector\nImportError: cannot import name 'Vector' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3172": [
+    "Error: Traceback (most recent call last):\n      L = Line(0, 1, 1, 2) # Line passing through (0,1) and (1,2)\n      p1 = Point(p1)\n      raise TypeError(filldedent('''\nTypeError: \nExpecting sequence of coordinates, not `int`",
+    "Error: Traceback (most recent call last):\n      D_double_prime = L.reflect(D_prime)\n      if l.slope.is_zero:\nAttributeError: 'Point2D' object has no attribute 'slope'"
+  ],
+  "question_3205": [
+    "Error: Traceback (most recent call last):\n      R = sp.Rational(2, sp.pi)\n      retval = cfunc(*args, **kwargs)\n      q = Rational(q)\n      retval = cfunc(*args, **kwargs)\n      raise TypeError('invalid input: %s' % p)\nTypeError: invalid input: pi"
+  ],
+  "question_9203": [
+    "Error: Traceback (most recent call last):\n      a = res.as_coeff_mul().args[0] # This is not reliable, use manual extraction\nAttributeError: 'tuple' object has no attribute 'args'"
+  ],
+  "question_1916": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Fraction\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1984": [
+    "Error: Traceback (most recent call last):\n      probability = Rational(area_event, area_total_cond)\n      retval = cfunc(*args, **kwargs)\n      p = Rational(p)\n      retval = cfunc(*args, **kwargs)\n      raise TypeError('invalid input: %s' % p)\nTypeError: invalid input: 1800 - 30*y",
+    "Error: Traceback (most recent call last):\n      probability = Rational(area_event, area_total_cond)\n      retval = cfunc(*args, **kwargs)\n      p = Rational(p)\n      retval = cfunc(*args, **kwargs)\n      raise TypeError('invalid input: %s' % p)\nTypeError: invalid input: 1800 - 30*y\nYour query or result is same from the last, please try a new approach."
+  ],
+  "question_2036": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2100": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, simplify, Fraction\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2126": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Fraction\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2342": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import binomial, Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2438": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8761": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2446": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2061": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_3f155b1e748d204312161fa4b7762567.py\", line 13\n    choose 1 more from remaining 2 (H, S)\n           ^\nSyntaxError: invalid syntax",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8747": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import binomial, Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1994": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2191": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8948": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Fraction\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)\nYour query or result is same from the last, please try a new approach."
+  ],
+  "question_1950": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2185": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2362": [
+    "Error: Traceback (most recent call last):\n      print(sympy.simplify(sympy.Rational(4*sympy.pi/3, 8)))\n      retval = cfunc(*args, **kwargs)\n      p = Rational(p)\n      retval = cfunc(*args, **kwargs)\n      raise TypeError('invalid input: %s' % p)\nTypeError: invalid input: 4*pi/3"
+  ],
+  "question_9139": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Fraction\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2162": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9003": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1938": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2107": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2498": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2455": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations_count, Rational\nImportError: cannot import name 'combinations_count' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2419": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2110": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Fraction\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8700": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2130": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Fraction\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2261": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction, factorial\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2379": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8947": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9099": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2179": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9064": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9100": [
+    "Error: Traceback (most recent call last):\n      from sympy import stirling\nImportError: cannot import name 'stirling' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2327": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8961": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2113": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction, factorial\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8734": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8872": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8902": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8927": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2147": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8746": [
+    "Error: Traceback (most recent call last):\n      r = root(n, p)\nNameError: name 'root' is not defined"
+  ],
+  "question_2146": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)\n\nError: Traceback (most recent call last):\n      prob = p(a)\nNameError: name 'p' is not defined\n\nError: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)\n\nError: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2049": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction, binomial\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8720": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2324": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2002": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Fraction\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9016": [
+    "Error: Traceback (most recent call last):\n      from sympy import binomial, Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1882": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2374": [
+    "Error: Traceback (most recent call last):\n      from sympy.combinatorics.numbers import StirlingNumber2\nModuleNotFoundError: No module named 'sympy.combinatorics.numbers'"
+  ],
+  "question_2451": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8803": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8829": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1754": [
+    "Error: Traceback (most recent call last):\n      area_train_there = integrate(integrate(1, (T, max(0, J-20), J)), (J, 0, 60)) # This logic needs manual adjustment for sympy\n      raise TypeError(\"cannot determine truth value of Relational\")\nTypeError: cannot determine truth value of Relational"
+  ],
+  "question_8695": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2117": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1761": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2382": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, binomial, Fraction\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import binomial, Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9069": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9041": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_72bba7d973f53abff7b6d938db232039.py\", line 47\n    \n    ^\nSyntaxError: unexpected EOF while parsing"
+  ],
+  "question_2482": [
+    "Error: Traceback (most recent call last):\n      from sympy.utilities.inttools import partitions\nModuleNotFoundError: No module named 'sympy.utilities.inttools'"
+  ],
+  "question_1819": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2450": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1858": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction, comb\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1965": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, permutations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2429": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2490": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2176": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations_count, binomial\nImportError: cannot import name 'combinations_count' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1777": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8821": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2081": [
+    "Error: Traceback (most recent call last):\n      n = sp.symbols('n')\nNameError: name 'sp' is not defined"
+  ],
+  "question_2487": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, product\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1794": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9033": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction, binomial\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2448": [
+    "Error: Traceback (most recent call last):\n      if Counter(p) <= available:\nTypeError: '<=' not supported between instances of 'Counter' and 'Counter'"
+  ],
+  "question_2097": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2306": [
+    "Error: Traceback (most recent call last):\n      tri = tuple(sorted([p1, p2, Point(r[0], r[1])], key=lambda p: (p.x, p.y)))\n      raise TypeError(\"cannot determine truth value of Relational\")\nTypeError: cannot determine truth value of Relational",
+    "Error: Traceback (most recent call last):\n      from sympy import combinations\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8945": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2189": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, combinations_with_replacement\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8891": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2364": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction, factorial\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8899": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2142": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2034": [
+    "Error: Traceback (most recent call last):\n      area_cond = integrate(4 - 0, (0, 0)) # wait, just use sympy symbols\n      integral = Integral(*args, **kwargs)\n      obj = AddWithLimits.__new__(cls, function, *symbols, **assumptions)\n      pre = _common_new(cls, function, *symbols,\n      limits, orientation = _process_limits(*symbols, discrete=discrete)\n      raise ValueError('Invalid limits given: %s' % str(symbols))\nValueError: Invalid limits given: ((0, 0),)"
+  ],
+  "question_1868": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2507": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import binomial, Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8896": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2073": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, fraction\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2022": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2060": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2461": [
+    "Error: Traceback (most recent call last):\n      from sympy import stirling\nImportError: cannot import name 'stirling' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8878": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_5c7476f1bed05a1a75fd451bf4f56f7a.py\", line 5\n    letters = \"TARGET\"\nIndentationError: unexpected indent\n\n48"
+  ],
+  "question_2087": [
+    "Error: Traceback (most recent call last):\n      prob_3 = Rational(prob_3).limit(p_val) # Ensure it's a fraction\nTypeError: limit() missing 1 required positional argument: 'xlim'"
+  ],
+  "question_1958": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Fraction\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2159": [
+    "Error: Traceback (most recent call last):\n      from sympy import stirling\nImportError: cannot import name 'stirling' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2076": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2164": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1870": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations_count, Rational\nImportError: cannot import name 'combinations_count' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9071": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational, binomial\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9054": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2332": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2158": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, simplify\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8775": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8941": [
+    "Error: Traceback (most recent call last):\n      from sympy import partitions\nImportError: cannot import name 'partitions' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1805": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2144": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9138": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2238": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2515": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2071": [
+    "Error: Traceback (most recent call last):\n      prob = sympy.Fraction(count, total)\nAttributeError: module 'sympy' has no attribute 'Fraction'"
+  ],
+  "question_2310": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_289e8af36ece330e4af633ecdd02bfb8.py\", line 86\n    \n    ^\nSyntaxError: unexpected EOF while parsing\n\n35"
+  ],
+  "question_8880": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1874": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction, binomial\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8997": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2426": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, permutations\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2205": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, Rational\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Rational\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9075": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction, binomial\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1852": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction, combinations\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9042": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb, Fraction\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import binomial, Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2337": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_2141": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8943": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_4073": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3463": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_4133": [
+    "Error: Traceback (most recent call last):\n      sum_abs_roots = sum(sp.abs(root) for root in roots)\n      sum_abs_roots = sum(sp.abs(root) for root in roots)\nAttributeError: module 'sympy' has no attribute 'abs'"
+  ],
+  "question_4025": [
+    "Error: Traceback (most recent call last):\n      if all(eval(c.subs({x: xv, y: yv, z: zv})) for c in constraints):\n      if all(eval(c.subs({x: xv, y: yv, z: zv})) for c in constraints):\nTypeError: eval() arg 1 must be a string, bytes or code object",
+    "Error: Traceback (most recent call last):\n      if all(c.subs({x: xv, y: yv, z: zv}) for c in constraints):\n      raise TypeError(\"cannot determine truth value of Relational\")\nTypeError: cannot determine truth value of Relational"
+  ],
+  "question_10469": [
+    "Error: Traceback (most recent call last):\n      result = prod(expr, (n, 1, 2004))\n      return reduce(operator.mul, a, start)\nTypeError: reduce() arg 2 must support iteration"
+  ],
+  "question_4514": [
+    "Error: Traceback (most recent call last):\n      val = f.subs(sol)\n      if isinstance(s[0], str):\nTypeError: 'Integer' object is not subscriptable",
+    "Error: Traceback (most recent call last):\n      print(f\"Value: {f.subs(sol)}\")\n      if isinstance(s[0], str):\nTypeError: 'Integer' object is not subscriptable"
+  ],
+  "question_10424": [
+    "Error: Traceback (most recent call last):\n      from sympy import solve_uniset\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_4186": [
+    "Error: Traceback (most recent call last):\n      h, k = h[0], k[0]\nTypeError: 'Symbol' object is not subscriptable"
+  ],
+  "question_10107": [
+    "Error: Traceback (most recent call last):\n      dist = sp.abs(roots[j] - roots[k])\nAttributeError: module 'sympy' has no attribute 'abs'"
+  ],
+  "question_4077": [
+    "Error: Traceback (most recent call last):\n      expr = a_val * w_sq_minus_2 + b_val * w + c_val # Not possible to use variables like this directly\nNameError: name 'a_val' is not defined\n\na=5, b=-24, c=42.0\ngcd(5, -24, 42)=1\n|c|=42"
+  ],
+  "question_3652": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_5b05155503dee9becaf16bd28e9ba285.py\", line 21\n    \n    ^\nSyntaxError: unexpected EOF while parsing",
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_9b738b38c8b32617e18206361f73f33f.py\", line 7\n    \n    ^\nSyntaxError: unexpected EOF while parsing\n\nError:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_8a970d7ac915de4eebc4adcaf12fec98.py\", line 8\n    \n    ^\nSyntaxError: unexpected EOF while parsing\n\nProperty holds: True\nf(10) = 100"
+  ],
+  "question_9889": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve, LagrangeMultiplier\nImportError: cannot import name 'LagrangeMultiplier' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      min_val = f.subs(sol[0])\n      if isinstance(s[0], str):\nTypeError: 'Rational' object is not subscriptable"
+  ],
+  "question_3718": [
+    "Error: Traceback (most recent call last):\n      print(sp.pow(2, 49))\nAttributeError: module 'sympy' has no attribute 'pow'"
+  ],
+  "question_3749": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, maximize\nImportError: cannot import name 'maximize' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_4617": [
+    "Error: Timeout"
+  ],
+  "question_10399": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9800": [
+    "Error: Traceback (most recent call last):\n      nonzero_coeffs = [c for c in P.coeffs() if c != 0]\nAttributeError: 'Mul' object has no attribute 'coeffs'"
+  ],
+  "question_3842": [
+    "Minimum value: 5.000000000000426\nx at minimum: 1.5436879623998008\n\nMinimum value: 5.000000000000426\nx at minimum: 1.5436879623998008\n\nMinimum value: 5.0\nx at minimum: 1.5436889662726372\n\nError: Traceback (most recent call last):\n      val = f.subs(x, sp.Root(3, 3))\nAttributeError: module 'sympy' has no attribute 'Root'"
+  ],
+  "question_3674": [
+    "Error: Timeout"
+  ],
+  "question_9719": [
+    "Error: Traceback (most recent call last):\n      im_z5 = sp.Im(z**5)\nAttributeError: module 'sympy' has no attribute 'Im'",
+    "Error: Traceback (most recent call last):\n      critical_point = sp.solve(dg_dt, t)[0]\nIndexError: list index out of range"
+  ],
+  "question_9935": [
+    "Error: Traceback (most recent call last):\n      expr = sp.Sum(1/(1 + z**n + z**(2*n)), (n, 0, 22))\nNameError: name 'n' is not defined"
+  ],
+  "question_3552": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, maximize\nImportError: cannot import name 'maximize' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3733": [
+    "Error: Traceback (most recent call last):\n      result = sp.simplify(sp.abs(ap - bp))\nAttributeError: module 'sympy' has no attribute 'abs'",
+    "Error: Traceback (most recent call last):\n      result = sp.simplify(sp.AbsoluteValue(ap - bp))\nAttributeError: module 'sympy' has no attribute 'AbsoluteValue'"
+  ],
+  "question_3880": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3519": [
+    "Error: Traceback (most recent call last):\n      lhs = sp.sqrt(sp.Rational(16, 25) - sp.Rational(4*k, 5))\n      retval = cfunc(*args, **kwargs)\n      p = Rational(p)\n      retval = cfunc(*args, **kwargs)\n      raise TypeError('invalid input: %s' % p)\nTypeError: invalid input: 4*k"
+  ],
+  "question_3443": [
+    "Error: Traceback (most recent call last):\n      if n_val <= sol < n_val + 1:\n      return func(self, other)\n      return GreaterThan(self, other)\n      raise TypeError(\"Invalid comparison of non-real %s\" % me)\nTypeError: Invalid comparison of non-real -9.13461538461539 - 1.75990434785799*I"
+  ],
+  "question_3712": [
+    "Error: Traceback (most recent call last):\n      a_val, b_val = sol[0]\nKeyError: 0"
+  ],
+  "question_10486": [
+    "Error: Traceback (most recent call last):\n      solution = sp.solve_uniset(sp.UndefinedSet, inequality, a) # This is for sets, use solve for roots\nAttributeError: module 'sympy' has no attribute 'solve_uniset'"
+  ],
+  "question_4359": [
+    "Error: Traceback (most recent call last):\n      if val.imag == 0:\nAttributeError: 'Pow' object has no attribute 'imag'"
+  ],
+  "question_9840": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, minimize\nImportError: cannot import name 'minimize' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9698": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_465e7eb22466dffdbb086d0ba9f9a471.py\", line 15\n    if it's exactly the root, we need k_val + 1\n                                               ^\nSyntaxError: EOL while scanning string literal"
+  ],
+  "question_4476": [
+    "Error: Traceback (most recent call last):\n      res = Union(Interval(3, 3.5, open=True), Interval(2.5, 3, open=True)) # wait, endpoints\nTypeError: __new__() got an unexpected keyword argument 'open'"
+  ],
+  "question_10073": [
+    "Error: Traceback (most recent call last):\n      coeff_x4 = sp.coeff(remainder, x, 4)\nAttributeError: module 'sympy' has no attribute 'coeff'"
+  ],
+  "question_10122": [
+    "Error: Traceback (most recent call last):\n      max_val = sp.maximize(expr, x1) # Note: maximize might return a tuple or object\nAttributeError: module 'sympy' has no attribute 'maximize'",
+    "Error: Traceback (most recent call last):\n      max_value = expr.subs(critical_pts[0])\n      raise ValueError(filldedent(\"\"\"\nValueError: \nWhen a single argument is passed to subs it should be a dictionary of\nold: new pairs or an iterable of (old, new) tuples."
+  ],
+  "question_4442": [
+    "Error: Traceback (most recent call last):\n      sol_u = sp.solve_uniset(expr <= 0, u)\nAttributeError: module 'sympy' has no attribute 'solve_uniset'",
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_656d5ae0dd1da405671a1e68372dd614.py\", line 15\n    better to use sp.root(x, 3)\n           ^\nSyntaxError: invalid syntax"
+  ],
+  "question_9812": [
+    "Error: Traceback (most recent call last):\n      coeff_xy = sp.coeff(diff, x*y)\nAttributeError: module 'sympy' has no attribute 'coeff'"
+  ],
+  "question_3605": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_10266": [
+    "Error: Traceback (most recent call last):\n      abs_sq = sp.abs(sol)**2\nAttributeError: module 'sympy' has no attribute 'abs'"
+  ],
+  "question_4627": [
+    "Error: Traceback (most recent call last):\n      val = f.subs(pt)\n      raise ValueError(filldedent(\"\"\"\nValueError: \nWhen a single argument is passed to subs it should be a dictionary of\nold: new pairs or an iterable of (old, new) tuples.",
+    "Error: Traceback (most recent call last):\n      val = f.subs({x: pt[0], y: pt[1]})\nTypeError: 'Symbol' object is not subscriptable"
+  ],
+  "question_9743": [
+    "Error: Traceback (most recent call last):\n      largest_x = max(solutions)\n      raise TypeError(\"cannot determine truth value of Relational\")\nTypeError: cannot determine truth value of Relational",
+    "Error: Traceback (most recent call last):\n      max_idx = numeric_solutions.index(max(numeric_solutions))\n      return func(self, other)\n      return StrictGreaterThan(self, other)\n      raise TypeError(\"Invalid comparison of non-real %s\" % me)\nTypeError: Invalid comparison of non-real -0.942809041582063 + 0.e-23*I"
+  ],
+  "question_10143": [
+    "Error: Traceback (most recent call last):\n      from sympy import comb\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_4611": [
+    "Error: Traceback (most recent call last):\n      s1 = Sum((2*k + 1) / (2**(2*k + 1)), (k, 0, oo)).doit()\nNameError: name 'k' is not defined"
+  ],
+  "question_4477": [
+    "Error: Traceback (most recent call last):\n      z1 = sp.complexify(roots[0])\nAttributeError: module 'sympy' has no attribute 'complexify'"
+  ],
+  "question_4209": [
+    "Error: Timeout"
+  ],
+  "question_9826": [
+    "Error: Timeout"
+  ],
+  "question_10089": [
+    "Error: Traceback (most recent call last):\n      min_val = min([f.subs(p) for p in critical_points])\n      raise TypeError(\"cannot determine truth value of Relational\")\nTypeError: cannot determine truth value of Relational"
+  ],
+  "question_4083": [
+    "Error: Traceback (most recent call last):\n      min_val = f.subs(crit_pts[0])\nKeyError: 0",
+    "Error: Traceback (most recent call last):\n      res = f.subs({x: crit_pts[0][0], y: crit_pts[0][1]})\nKeyError: 0"
+  ],
+  "question_4607": [
+    "Error: Traceback (most recent call last):\n      valid_b = sp.intersect(cond_disc, cond_sum)\nAttributeError: module 'sympy' has no attribute 'intersect'",
+    "Error: Traceback (most recent call last):\n      prob = sp.Fraction(length_valid, total_length)\nAttributeError: module 'sympy' has no attribute 'Fraction'"
+  ],
+  "question_10445": [
+    "Error: Timeout"
+  ],
+  "question_10144": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_f408154b695f65caacb60e7969783561.py\", line 28\n    roots = []\nIndentationError: unexpected indent"
+  ],
+  "question_3866": [
+    "Error: Traceback (most recent call last):\n      area = 2 * sp.sqrt(sp.abs(u1_sq) * sp.abs(u2_sq))\nAttributeError: module 'sympy' has no attribute 'abs'"
+  ],
+  "question_4101": [
+    "Error: Traceback (most recent call last):\n      C_val = C.evalf() # Actually just an integer\nAttributeError: 'int' object has no attribute 'evalf'"
+  ],
+  "question_3442": [
+    "Error: Traceback (most recent call last):\n      print(\", \".join(results))\nTypeError: sequence item 2: expected str instance, NoneType found"
+  ],
+  "question_3779": [
+    "Error: Traceback (most recent call last):\n      r_val = constant_term.subs(sol[0])\nIndexError: list index out of range",
+    "Error: Traceback (most recent call last):\n      r_val = coeffs[2].subs(sol[0])\nKeyError: 0"
+  ],
+  "question_10529": [
+    "Error: Traceback (most recent call last):\n      eq1 = sp.Expand((x - 4)**2 + y**2) - sp.Expand((x - 8)**2 + y**2)\nAttributeError: module 'sympy' has no attribute 'Expand'"
+  ],
+  "question_4594": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_4035": [
+    "Error: Traceback (most recent call last):\n      return f.rep.dom, f.per, f.rep, f.rep.per(f.rep.dom.from_sympy(g))\n      raise CoercionFailed(\"expected an integer, got %s\" % a)\nsympy.polys.polyerrors.CoercionFailed: expected an integer, got x**4 - 3*x**2 - 11\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n      rem_lhs = poly(lhs, x).rem(P)\n      dom, per, F, G = f._unify(g)\n      raise UnificationFailed(\"Cannot unify %s with %s\" % (f, g))\nsympy.polys.polyerrors.UnificationFailed: Cannot unify Poly(x**100 - 2*x**98 - 14*x**96 - 11*x**94, x, domain='ZZ') with x**4 - 3*x**2 - 11"
+  ],
+  "question_9709": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, minimize\nImportError: cannot import name 'minimize' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      print(expr.subs(sol[0]))\n      if isinstance(s[0], str):\nTypeError: 'Rational' object is not subscriptable"
+  ],
+  "question_10170": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9668": [
+    "Error: Traceback (most recent call last):\n      possible_z = [sp.Complex(s[0], s[1]) for s in sol]\n      possible_z = [sp.Complex(s[0], s[1]) for s in sol]\nAttributeError: module 'sympy' has no attribute 'Complex'"
+  ],
+  "question_9997": [
+    "Error: Traceback (most recent call last):\n      final_cond = sp.intersect(cond1, sp.intersect(cond2, cond3))\nAttributeError: module 'sympy' has no attribute 'intersect'",
+    "Error: Traceback (most recent call last):\n      solution = sp.solve(combined_cond, k)\n      solution = _solve(f[0], *symbols, **flags)\n      f_num, sol = solve_linear(f, symbols=symbols)\n      eq = lhs - rhs\nTypeError: unsupported operand type(s) for -: 'And' and 'int'"
+  ],
+  "question_10059": [
+    "Error: Traceback (most recent call last):\n      rounded_val = complex(round(val.real, 10), round(val.imag, 10))\nAttributeError: 'Add' object has no attribute 'real'"
+  ],
+  "question_3735": [
+    "Error: Traceback (most recent call last):\n      max_val = expr.subs(critical_points[0])\n      raise ValueError(filldedent(\"\"\"\nValueError: \nWhen a single argument is passed to subs it should be a dictionary of\nold: new pairs or an iterable of (old, new) tuples."
+  ],
+  "question_3811": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_b533a2a6d5ede889c93f95924c6687e7.py\", line 27\n    we need the product of ALL chosen d_i to divide val.\nIndentationError: expected an indented block"
+  ],
+  "question_9764": [
+    "Error: Traceback (most recent call last):\n      coeff_n = sp.coeff(G, x, n)\nAttributeError: module 'sympy' has no attribute 'coeff'",
+    "Error: Traceback (most recent call last):\n      coeff_n = poly_G.coeff(x, n)\n      raise NotImplementedError(\nNotImplementedError: Either convert to Expr with `as_expr` method to use Expr's coeff method or else use the `coeff_monomial` method of Polys."
+  ],
+  "question_3894": [
+    "Error: Traceback (most recent call last):\n      eq = x**2 + (18-2*k)*x + 17-k # symbolic x defined below\nNameError: name 'x' is not defined\n\nError:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_3a0eff62a8e49f5963b8ef88701f8554.py\", line 41\n    \n    ^\nSyntaxError: unexpected EOF while parsing\n\nError:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_c939b404c7e8e73e61a25f390c0cb547.py\", line 32\n    \n    ^\nSyntaxError: unexpected EOF while parsing\n\n12378"
+  ],
+  "question_10232": [
+    "Error: Traceback (most recent call last):\n      sum_p_1 = sum(f.subs(x, 1) for f in factors)\n      sum_p_1 = sum(f.subs(x, 1) for f in factors)\nAttributeError: 'tuple' object has no attribute 'subs'"
+  ],
+  "question_10178": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, fraction, gcd\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import comb, gcd\nImportError: cannot import name 'comb' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9924": [
+    "Error: Traceback (most recent call last):\n      coeff_x2 = sp.coeff(h_expanded, x, 2)\nAttributeError: module 'sympy' has no attribute 'coeff'"
+  ],
+  "question_10193": [
+    "Error: Traceback (most recent call last):\n      val = f.subs(s)\n      if isinstance(s[0], str):\nTypeError: 'Integer' object is not subscriptable",
+    "Error: Traceback (most recent call last):\n      for s in sol:\nNameError: name 'sol' is not defined\n\n11"
+  ],
+  "question_4038": [
+    "Error: Traceback (most recent call last):\n      solutions.add(sol)\nTypeError: unhashable type: 'dict'"
+  ],
+  "question_3861": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_12f710858f1e81f379bf540d1c7b7de6.py\", line 36\n    \n    ^\nSyntaxError: unexpected EOF while parsing",
+    "Error: Traceback (most recent call last):\n      print(get_areas())\n      results.add(sp.simplify(sp.abs(p[1] - p[0])**2))\nAttributeError: module 'sympy' has no attribute 'abs'"
+  ],
+  "question_3635": [
+    "Error: Traceback (most recent call last):\n      min_val = f.subs(critical_point[0])\nKeyError: 0"
+  ],
+  "question_3802": [
+    "Error: Traceback (most recent call last):\n      A, B, C = coeffs\nValueError: too many values to unpack (expected 3)"
+  ],
+  "question_3687": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, maximize\nImportError: cannot import name 'maximize' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_10422": [
+    "Error: Timeout"
+  ],
+  "question_4604": [
+    "Error: Timeout\nError: Timeout"
+  ],
+  "question_10525": [
+    "Error: Traceback (most recent call last):\n      res = f.subs(sol[0])\n      if isinstance(s[0], str):\nTypeError: 'Pow' object is not subscriptable"
+  ],
+  "question_9777": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, S\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_4387": [
+    "Error: Traceback (most recent call last):\n      if cmath.imag(complex(0, 1)**x + complex(0, 1)**y) == 0:\nAttributeError: module 'cmath' has no attribute 'imag'"
+  ],
+  "question_10056": [
+    "Error: Timeout"
+  ],
+  "question_4298": [
+    "Error: Timeout"
+  ],
+  "question_4612": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, interpolate, sum_polynomial\nImportError: cannot import name 'sum_polynomial' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3612": [
+    "Error: Timeout"
+  ],
+  "question_4499": [
+    "Error: Traceback (most recent call last):\n      from sympy import combinations, binomial\nImportError: cannot import name 'combinations' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy import binomial, Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_10496": [
+    "Error: Traceback (most recent call last):\n      R = sp.coeff(remainder, x, 1)\nAttributeError: module 'sympy' has no attribute 'coeff'"
+  ],
+  "question_4313": [
+    "Error: Traceback (most recent call last):\n      num = sp.simplify(sp.numerator(lhs_minus_rhs))\nAttributeError: module 'sympy' has no attribute 'numerator'"
+  ],
+  "question_10181": [
+    "Error: Traceback (most recent call last):\n      c5 = (s[a1] + 4*s[d]) + s[b1] * s[r]**4\nTypeError: tuple indices must be integers or slices, not Symbol"
+  ],
+  "question_9988": [
+    "Error: Timeout"
+  ],
+  "question_9641": [
+    "Error: Traceback (most recent call last):\n      result = sp.abs(sum_val)\nAttributeError: module 'sympy' has no attribute 'abs'"
+  ],
+  "question_4157": [
+    "Error: Traceback (most recent call last):\n      from sympy import Rational, sum_sum\nImportError: cannot import name 'sum_sum' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3888": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, minimize, Immutable\nImportError: cannot import name 'minimize' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      min_val = g.subs(critical_points[0])\n      raise ValueError(filldedent(\"\"\"\nValueError: \nWhen a single argument is passed to subs it should be a dictionary of\nold: new pairs or an iterable of (old, new) tuples."
+  ],
+  "question_4484": [
+    "Error: Traceback (most recent call last):\n      eq1 = sp.Rational(a*c, a+b) + sp.Rational(b*a, b+c) + sp.Rational(c*b, c+a) + 9\n      retval = cfunc(*args, **kwargs)\n      p = Rational(p)\n      retval = cfunc(*args, **kwargs)\n      raise TypeError('invalid input: %s' % p)\nTypeError: invalid input: a*c",
+    "Error: Timeout"
+  ],
+  "question_3482": [
+    "Error: Traceback (most recent call last):\n      eq = sp.sqrt(x**2 + 2**2) + sp.abs(x - 3) - dist_origin\nAttributeError: module 'sympy' has no attribute 'abs'",
+    "Error: Traceback (most recent call last):\n      solutions = sp.solve(eq, x)\n      raise NotImplementedError('solving %s when the argument '\nNotImplementedError: solving Abs(x - 3) when the argument is not real or imaginary."
+  ],
+  "question_9718": [
+    "Error: Traceback (most recent call last):\n      P = sp.lambda_function(sp.symbols('x'), sp.symbols('a')**0 * sp.symbols('x')**3 + a_val*sp.symbols('x')**2 + b_val*sp.symbols('x') + c)\nAttributeError: module 'sympy' has no attribute 'lambda_function'"
+  ],
+  "question_4597": [
+    "Error: Traceback (most recent call last):\n      x_vals = sp.simplify(x_vals)\n      original_expr = expr = collect_abs(signsimp(expr))\n      return expr.replace(\nAttributeError: 'list' object has no attribute 'replace'",
+    "Error: Traceback (most recent call last):\n      p = int(expr.as_coeff_mul()) # This isn't quite right, let's just use the expression\nTypeError: int() argument must be a string, a bytes-like object or a number, not 'tuple'"
+  ],
+  "question_3526": [
+    "Error: Traceback (most recent call last):\n      row = [m.subs({x: px, y: py}) for m in monomials]\n      row = [m.subs({x: px, y: py}) for m in monomials]\nAttributeError: 'int' object has no attribute 'subs'"
+  ],
+  "question_4198": [
+    "Error: Traceback (most recent call last):\n      two_c = sp.abs(F2_y - F1_y)\nAttributeError: module 'sympy' has no attribute 'abs'"
+  ],
+  "question_9752": [
+    "Error: Timeout",
+    "Error: Timeout\nYour query or result is same from the last, please try a new approach."
+  ],
+  "question_3452": [
+    "Error: Traceback (most recent call last):\n      eqs = [sp.Eq(sp.coeff(lhs, x, 4), sp.coeff(rhs, x, 4)),\nAttributeError: module 'sympy' has no attribute 'coeff'"
+  ],
+  "question_3852": [
+    "Error: Traceback (most recent call last):\n      coeff_x5 = sp.Poly(P, x).coeff(x, 5)\n      raise NotImplementedError(\nNotImplementedError: Either convert to Expr with `as_expr` method to use Expr's coeff method or else use the `coeff_monomial` method of Polys."
+  ],
+  "question_9865": [
+    "Error: Timeout"
+  ],
+  "question_9823": [
+    "Error: Timeout"
+  ],
+  "question_3493": [
+    "Error: Traceback (most recent call last):\n      from sympy import Rational, sum\nImportError: cannot import name 'sum' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3993": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_10036": [
+    "Error: Traceback (most recent call last):\n      solve()\n      g_0 = Rational(1, product(range(2, 8))) # Product from 2 to 7? No, g(n) has 5 terms: 2,3,4,5,6\n      prod = Product(*args, **kwargs)\n      obj = ExprWithIntLimits.__new__(cls, function, *symbols, **assumptions)\n      pre = _common_new(cls, function, *symbols,\n      raise ValueError(\nValueError: specify dummy variables for Range(2, 8, 1)"
+  ],
+  "question_10344": [
+    "Error: Traceback (most recent call last):\n      values = [f.subs(p).simplify() for p in points_to_check]\n      values = [f.subs(p).simplify() for p in points_to_check]\n      raise ValueError(filldedent(\"\"\"\nValueError: \nWhen a single argument is passed to subs it should be a dictionary of\nold: new pairs or an iterable of (old, new) tuples."
+  ],
+  "question_4502": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3663": [
+    "Error: Traceback (most recent call last):\n      n = math.isqrt(n_sq)\nValueError: isqrt() argument must be nonnegative"
+  ],
+  "question_4560": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve, Interval, length\nImportError: cannot import name 'length' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_3831": [
+    "Error: Traceback (most recent call last):\n      max_k_sq = max([k_sq.subs(v, p) for p in valid_v])\nValueError: max() arg is an empty sequence"
+  ],
+  "question_4386": [
+    "Error: Traceback (most recent call last):\n      c1 = sympy.ComplexNumber('-1', '-3')\nAttributeError: module 'sympy' has no attribute 'ComplexNumber'",
+    "Error: Traceback (most recent call last):\n      dist_centers = sympy.abs(c1 - c2)\nAttributeError: module 'sympy' has no attribute 'abs'"
+  ],
+  "question_3703": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_10487": [
+    "Error: Traceback (most recent call last):\n      leading_coeff = sp.Poly(poly, x).coeff(x, sp.Poly(poly, x).degree())\n      raise NotImplementedError(\nNotImplementedError: Either convert to Expr with `as_expr` method to use Expr's coeff method or else use the `coeff_monomial` method of Polys.",
+    "Error: Traceback (most recent call last):\n      monic_poly = poly / poly.leading_coefficient()\nAttributeError: 'Poly' object has no attribute 'leading_coefficient'"
+  ],
+  "question_10201": [
+    "Error: Traceback (most recent call last):\n      max_val = max([h.subs(p, pt) for pt in crit_pts if pt.is_real])\n      max_val = max([h.subs(p, pt) for pt in crit_pts if pt.is_real])\nNameError: name 'p' is not defined"
+  ],
+  "question_10054": [
+    "Error: Traceback (most recent call last):\n      from sympy import Rational, min\nImportError: cannot import name 'min' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_9933": [
+    "Error: Traceback (most recent call last):\n      print(f\"p is irreducible: {sp.is_irreducible(p)}\")\nAttributeError: module 'sympy' has no attribute 'is_irreducible'"
+  ],
+  "question_9822": [
+    "Error: Traceback (most recent call last):\n      print(solution[0])\nIndexError: list index out of range",
+    "Error: Traceback (most recent call last):\n      coeff_x3 = sp.coeff(poly_product, x, 3)\nAttributeError: module 'sympy' has no attribute 'coeff'"
+  ],
+  "question_3660": [
+    "Error: Traceback (most recent call last):\n      from sympy import issquare\nImportError: cannot import name 'issquare' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      from sympy.ntheory import issquare\nImportError: cannot import name 'issquare' from 'sympy.ntheory' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/ntheory/__init__.py)"
+  ],
+  "question_12500": [
+    "Error: Traceback (most recent call last):\n      v = A.nullspace()[0]\nIndexError: list index out of range"
+  ],
+  "question_6839": [
+    "Error: Timeout",
+    "Error: Timeout\nYour query or result is same from the last, please try a new approach."
+  ],
+  "question_7468": [
+    "Error: Timeout",
+    "Error: Timeout\nYour query or result is same from the last, please try a new approach."
+  ],
+  "question_7459": [
+    "Error: Traceback (most recent call last):\n      P = I - (1/nTn) * nnT\nTypeError: unsupported operand type(s) for /: 'int' and 'MutableDenseMatrix'"
+  ],
+  "question_7176": [
+    "Error: Timeout"
+  ],
+  "question_7283": [
+    "Error: Traceback (most recent call last):\n      coeffs = A.LUsolve(B)\n      return _LUsolve(self, rhs, iszerofunc=iszerofunc)\n      raise ShapeError(\nsympy.matrices.common.ShapeError: ``M`` and ``rhs`` must have the same number of rows."
+  ],
+  "question_12449": [
+    "Error: Traceback (most recent call last):\n      results = [expr.subs(pt) for pt in crit_pts if pt[0] > 1 and pt[1] > 1]\n      results = [expr.subs(pt) for pt in crit_pts if pt[0] > 1 and pt[1] > 1]\n      if isinstance(s[0], str):\nTypeError: 'Integer' object is not subscriptable"
+  ],
+  "question_12145": [
+    "Error: Traceback (most recent call last):\n      x = Rational(8 * k * pi, 3)\n      retval = cfunc(*args, **kwargs)\n      p = Rational(p)\n      retval = cfunc(*args, **kwargs)\n      raise TypeError('invalid input: %s' % p)\nTypeError: invalid input: -160*pi"
+  ],
+  "question_6803": [
+    "Error: Traceback (most recent call last):\n      coeffs = poly.coeff_poly(x, y) # This is not quite right for general poly\nAttributeError: 'Add' object has no attribute 'coeff_poly'",
+    "Error: Traceback (most recent call last):\n      monom[indices[base]] = exp\nKeyError: 1/(y**2 + 6*y + 9)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n      poly = sp.Poly(poly_expr, x, y)\n      return cls._from_expr(rep, opt)\n      rep, opt = _dict_from_expr(rep, opt)\n      rep, gens = _dict_from_expr_if_gens(expr, opt)\n      (poly,), gens = _parallel_dict_from_expr_if_gens((expr,), opt)\n      raise PolynomialError(\"%s contains an element of \"\nsympy.polys.polyerrors.PolynomialError: 1/(y**2 + 6*y + 9) contains an element of the set of generators."
+  ],
+  "question_12055": [
+    "Error: Traceback (most recent call last):\n      ratio = sp.Fraction(int(angle_ACB), int(angle_APQ))\nAttributeError: module 'sympy' has no attribute 'Fraction'"
+  ],
+  "question_6798": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_7374": [
+    "Error: Traceback (most recent call last):\n      sum_ce_sq += (E - C).distance_sq()\nAttributeError: 'Point2D' object has no attribute 'distance_sq'"
+  ],
+  "question_6872": [
+    "Error: Traceback (most recent call last):\n      cos_theta = abs(v1_vec.dot(v2_vec)) / (v1_vec.norm() * v2_vec.norm())\nAttributeError: 'Point2D' object has no attribute 'norm'"
+  ],
+  "question_12159": [
+    "Error: Traceback (most recent call last):\n      eigenvalues = char_poly.roots()\nAttributeError: 'PurePoly' object has no attribute 'roots'"
+  ],
+  "question_12005": [
+    "Error: Traceback (most recent call last):\n      min_dist_sq = dist_sq.subs(sol[0])\nKeyError: 0"
+  ],
+  "question_12011": [
+    "Error: Traceback (most recent call last):\n      c_vec = sol[0][0] * u_c if isinstance(sol, list) else sol[0] * u_c # wait, sol is {(k,t):...}\nKeyError: 0"
+  ],
+  "question_7255": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, Point3D, Plane, cross_product\nImportError: cannot import name 'cross_product' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_7239": [
+    "Error: Traceback (most recent call last):\n      det_eq = sp.det(matrix)\n      return Determinant(matexpr).doit()\n      raise NonSquareMatrixError(\"Det of a non-square matrix\")\nsympy.matrices.common.NonSquareMatrixError: Det of a non-square matrix"
+  ],
+  "question_7169": [
+    "Error: Traceback (most recent call last):\n      from sympy import Point3D, Plane, line_between_two_points, Intersection\nImportError: cannot import name 'line_between_two_points' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)\n\n(-1.666666666666666, 5.333333333333333, 8.333333333333334)"
+  ],
+  "question_12051": [
+    "Error: Traceback (most recent call last):\n      coeffs = poly.all_coeffs()\nAttributeError: 'Add' object has no attribute 'all_coeffs'"
+  ],
+  "question_7138": [
+    "Error: Traceback (most recent call last):\n      P = numerator / denominator\n      return func(self, other)\n      return self * (self.one / other)\nTypeError: unsupported operand type(s) for /: 'One' and 'MutableDenseMatrix'"
+  ],
+  "question_12492": [
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_c85bd9a27b54b5244b9ed667d61fab78.py\", line 37\n    (sp.sqrt(3)*3.evalf())\n                  ^\nSyntaxError: f-string: invalid syntax"
+  ],
+  "question_7113": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, Point3D, Vector\nImportError: cannot import name 'Vector' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_7160": [
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_4898ca066e8596dc576f60d42cdca110.py\", line 36\n    \n    ^\nSyntaxError: unexpected EOF while parsing"
+  ],
+  "question_7241": [
+    "Error: Traceback (most recent call last):\n      equation = sp.Eq(sum(r_t**2), 1)\n      return func(self, other)\n      return self.pow(exp)\n      raise NonSquareMatrixError()\nsympy.matrices.common.NonSquareMatrixError"
+  ],
+  "question_11991": [
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_2e3d5172b6b3a305f133faee20fc9306.py\", line 6\n    \n    ^\nSyntaxError: unexpected EOF while parsing\n\n50"
+  ],
+  "question_12294": [
+    "Error: Traceback (most recent call last):\n      P = sp.Matrix([eigvecs[0][1], eigvecs[1][1]]).T # Incorrect indexing, fix below\nTypeError: 'Add' object is not subscriptable\n\nMatrix([[1, 2], [-3, -5]])\n\nError: Traceback (most recent call last):\n      v1 = A.eigenvectors(ev1)[0]\nAttributeError: 'MutableDenseMatrix' object has no attribute 'eigenvectors'"
+  ],
+  "question_7154": [
+    "Error: Traceback (most recent call last):\n      R = I - 2 * nnT / nTn\n      return func(self, other)\n      return self * (self.one / other)\nTypeError: unsupported operand type(s) for /: 'One' and 'MutableDenseMatrix'"
+  ],
+  "question_6956": [
+    "Error: Traceback (most recent call last):\n      eq1 = sp.Eq(OC[0], m * OA[0] + n * OB[0])\nTypeError: 'NoneType' object is not subscriptable"
+  ],
+  "question_7334": [
+    "Error: Timeout"
+  ],
+  "question_7452": [
+    "Error: Traceback (most recent call last):\n      if val > max_y:\n      raise TypeError(\"cannot determine truth value of Relational\")\nTypeError: cannot determine truth value of Relational"
+  ],
+  "question_7083": [
+    "Error: Timeout"
+  ],
+  "question_6957": [
+    "Error: Timeout"
+  ],
+  "question_7259": [
+    "Error: Traceback (most recent call last):\n      from sympy import cos, sin, pi, Rational, sum_expr, Sum, expand_trig\nImportError: cannot import name 'sum_expr' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Timeout"
+  ],
+  "question_7395": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6755": [
+    "Error: /home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/solvers/solvers.py:2338: SymPyDeprecationWarning: \n\nnon-Expr objects in a Matrix is deprecated. Matrix represents\na mathematical matrix. To represent a container of non-numeric\nentities, Use a list of lists, TableForm, NumPy array, or some\nother data structure instead.\n\nSee https://docs.sympy.org/latest/explanation/active-deprecations.html#deprecated-non-expr-in-matrix\nfor details.\n\nThis has been deprecated since SymPy version 1.9. It\nwill be removed in a future version of SymPy.\n\n  eqs = list(system * Matrix(symbols + (-1,)))\nTraceback (most recent call last):\n      sol = sp.solve_linear_system(M, sp.Matrix([0, 0]), method='gaussian')\n      eqs = list(system * Matrix(symbols + (-1,)))\n      return func(self, other)\n      return self.multiply(other)\n      raise ShapeError(\"Matrix size mismatch: %s * %s.\" % (\nsympy.matrices.common.ShapeError: Matrix size mismatch: (2, 2) * (3, 1)."
+  ],
+  "question_12198": [
+    "Error: Traceback (most recent call last):\n      x_val = sp.solve(sp.Eq(X, image[0]), x_sym)[0]\nIndexError: list index out of range"
+  ],
+  "question_12438": [
+    "Error: Traceback (most recent call last):\n      lcm_val = sp.lcm(*denoms)\n      (F, G), opt = parallel_poly_from_expr((f, g), *gens, **args)\n      opt = options.build_options(gens, args)\n      return Options(gens, args)\n      preprocess_options(args)\n      self[option] = cls.preprocess(value)\n      elif any(gen.is_commutative is False for gen in gens):\n      elif any(gen.is_commutative is False for gen in gens):\nAttributeError: 'int' object has no attribute 'is_commutative'"
+  ],
+  "question_6823": [
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_d2325a70960d6a2b199dbef27a7e501f.py\", line 46\n    w,t < 0). Total = 3 * 8/3 = 8.\n           ^\nSyntaxError: unmatched ')'"
+  ],
+  "question_6832": [
+    "Error: Timeout"
+  ],
+  "question_12213": [
+    "Error: Traceback (most recent call last):\n      from sympy import Point, Vector\nImportError: cannot import name 'Vector' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_6897": [
+    "Error: Traceback (most recent call last):\n      return operator.index(n)\nTypeError: 'MutableDenseMatrix' object cannot be interpreted as an integer\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n      solve()\n      M = sp.Matrix(sp.Matrix(a).T, sp.Matrix(b).T, sp.Matrix(c).T).T\n      return cls._new(*args, **kwargs)\n      rows, cols, flat_list = cls._handle_creation_inputs(*args, **kwargs)\n      rows = as_int(args[0])\n      raise ValueError('%s is not an integer' % (n,))\nValueError: Matrix([[a1, a2, a3]]) is not an integer"
+  ],
+  "question_12060": [
+    "Error: Traceback (most recent call last):\n      results = [s[0] for s in sol1] + [s[0] for s in sol2]\n      results = [s[0] for s in sol1] + [s[0] for s in sol2]\nTypeError: 'Symbol' object is not subscriptable"
+  ],
+  "question_6814": [
+    "Error: Timeout"
+  ],
+  "question_12174": [
+    "Error: Traceback (most recent call last):\n      res = expr.subs(s)\n      if isinstance(s[0], str):\nTypeError: 'Mul' object is not subscriptable\n\nError: Traceback (most recent call last):\n      res = expr.subs(s)\n      if isinstance(s[0], str):\nTypeError: 'Mul' object is not subscriptable"
+  ],
+  "question_7466": [
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_fd4a922acfd70399a91030cb86f51f95.py\", line 26\n    \n    ^\nSyntaxError: unexpected EOF while parsing\n\nError:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_28ecb68b508d6b4877407885ae82b168.py\", line 10\n    print(    x_vals.append((90 - 2*0 + 360*k)/9) # This was wrong, corrected below)\n    ^\nIndentationError: expected an indented block"
+  ],
+  "question_6825": [
+    "Error: Traceback (most recent call last):\n      equation = sp.det(det_matrix)\n      return Determinant(matexpr).doit()\n      raise NonSquareMatrixError(\"Det of a non-square matrix\")\nsympy.matrices.common.NonSquareMatrixError: Det of a non-square matrix"
+  ],
+  "question_5320": [
+    "Error: Traceback (most recent call last):\n      from sympy import tau\nImportError: cannot import name 'tau' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5105": [
+    "Error: Traceback (most recent call last):\n      from sympy import digits\nImportError: cannot import name 'digits' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5295": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5349": [
+    "Error: Traceback (most recent call last):\n      from sympy.ntheory import chinese_remainder\nImportError: cannot import name 'chinese_remainder' from 'sympy.ntheory' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/ntheory/__init__.py)"
+  ],
+  "question_11017": [
+    "Error: Traceback (most recent call last):\n      from sympy import nt_theory\nImportError: cannot import name 'nt_theory' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_10600": [
+    "Error: Traceback (most recent call last):\n      from sympy import mod\nImportError: cannot import name 'mod' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_10579": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_1d341faab3305000651c82e0974f82d0.py\", line 44\n    print(    return res)\n              ^\nSyntaxError: invalid syntax\n\n-221"
+  ],
+  "question_5045": [
+    "Error: Traceback (most recent call last):\n      from sympy import is_squarefree\nImportError: cannot import name 'is_squarefree' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5260": [
+    "Error: Traceback (most recent call last):\n      from sympy import divisors_count\nImportError: cannot import name 'divisors_count' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5005": [
+    "Error: Traceback (most recent call last):\n      x0 = solve_congruence(3, 34, 35) # This is for 3x = 34 (mod 35)\n      rm = [(as_int(r), as_int(m)) for r, m in rm]\n      rm = [(as_int(r), as_int(m)) for r, m in rm]\nTypeError: cannot unpack non-iterable int object"
+  ],
+  "question_5303": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction, factorial\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5263": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_4845": [
+    "Error: Traceback (most recent call last):\n      remainder = sp.remainder(f, g)\nAttributeError: module 'sympy' has no attribute 'remainder'"
+  ],
+  "question_5284": [
+    "Error: Traceback (most recent call last):\n      x_expr = sol[0][0]\nKeyError: 0"
+  ],
+  "question_5291": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_10780": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5510": [
+    "Error: Traceback (most recent call last):\n      from sympy import solve_congruence\nImportError: cannot import name 'solve_congruence' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5339": [
+    "Error: Traceback (most recent call last):\n      max_n = max(n_k(k) for k in range(1, 20))\n      max_n = max(n_k(k) for k in range(1, 20))\n      return sympy.valuation(ik, 2)\nAttributeError: module 'sympy' has no attribute 'valuation'"
+  ],
+  "question_5440": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_4733": [
+    "Error: Traceback (most recent call last):\n      from sympy.solvers.diophantine import linear_congruence\nImportError: cannot import name 'linear_congruence' from 'sympy.solvers.diophantine' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/solvers/diophantine/__init__.py)"
+  ],
+  "question_5254": [
+    "Error:   File \"/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_6ee6ffb76a202d4a3b11750fa31932c0.py\", line 19\n    the condition becomes harder to satisfy as n increases\n        ^\nSyntaxError: invalid syntax"
+  ],
+  "question_5483": [
+    "Error: Traceback (most recent call last):\n      from sympy.solvers.diophantine import linear_congruence\nImportError: cannot import name 'linear_congruence' from 'sympy.solvers.diophantine' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/solvers/diophantine/__init__.py)"
+  ],
+  "question_5293": [
+    "Error: Traceback (most recent call last):\n      u_AB = (B - A).normalized()\nAttributeError: 'Point2D' object has no attribute 'normalized'",
+    "Error: Traceback (most recent call last):\n      dist_AB = v_AB.length()\nTypeError: 'Zero' object is not callable"
+  ],
+  "question_4803": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5266": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5034": [
+    "Error: Traceback (most recent call last):\n      from sympy import powmod\nImportError: cannot import name 'powmod' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5523": [
+    "Error: Traceback (most recent call last):\n      solution = solveset(Mod(8*x, 12, 4), x, domain=Mod(x, 12))\n      retval = cfunc(*args, **kwargs)\n      raise TypeError(temp % {\nTypeError: Mod takes exactly 2 arguments (3 given)"
+  ],
+  "question_5258": [
+    "Error: Traceback (most recent call last):\n      result = a + b + c - gcd(a, b) - gcd(b, c) - gcd(c, a) + gcd(a, b, c)\nTypeError: gcd() takes 2 positional arguments but 3 were given"
+  ],
+  "question_10858": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction, gcd\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_4745": [
+    "Error: Traceback (most recent call last):\n      from sympy import bin\nImportError: cannot import name 'bin' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_4805": [
+    "Error: Traceback (most recent call last):\n      R1, v1 = 5, Fraction(3 * math.pi, math.pi) # 3\n      raise TypeError(\"both arguments should be \"\nTypeError: both arguments should be Rational instances"
+  ],
+  "question_5179": [
+    "Error: Traceback (most recent call last):\n      while x < 1000:\nTypeError: '<' not supported between instances of 'tuple' and 'int'"
+  ],
+  "question_4694": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/main-server/Desktop/javad/venv/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_5310": [
+    "Error: Timeout",
+    "Error: Timeout\nYour query or result is same from the last, please try a new approach."
+  ],
+  "question_8313": [
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_fe2cacc7f53ebe7232496a0aa84b38a3.py\", line 12\n    B will be its reflection\n      ^\nSyntaxError: invalid syntax"
+  ],
+  "question_7678": [
+    "Error: Traceback (most recent call last):\n      d = sp.abs(D - radius)\nAttributeError: module 'sympy' has no attribute 'abs'"
+  ],
+  "question_7696": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, S\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      domain = reduce_inequalities(expr >= 0, x, S.Reals)\nTypeError: reduce_inequalities() takes from 1 to 2 positional arguments but 3 were given"
+  ],
+  "question_1611": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1031": [
+    "Error: Traceback (most recent call last):\n      sp.Eq(sp.coeff(lhs_num, x, 2), sp.coeff(rhs_num, x, 2)),\nAttributeError: module 'sympy' has no attribute 'coeff'"
+  ],
+  "question_8340": [
+    "Error: Traceback (most recent call last):\n      print(sol[0][0])\nKeyError: 0"
+  ],
+  "question_10": [
+    "Error: Traceback (most recent call last):\n      from sympy import Rational, round\nImportError: cannot import name 'round' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8205": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8172": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8076": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, Interval, S\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_7837": [
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_ebbffc2bf6885185f6b6368798976537.py\", line 20\n    ab = 3*2 = 6\n         ^\nSyntaxError: cannot assign to operator",
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_38fc06c7eceb91742f471d44eef67fc5.py\", line 10\n    ab = 3*2 = 6\n         ^\nSyntaxError: cannot assign to operator\n\nResult: 2*sqrt(3) + 9*2**(1/5)/6\na + b = 5"
+  ],
+  "question_7954": [
+    "Error: Traceback (most recent call last):\n      min_val = min(values)\n      raise TypeError(\"cannot determine truth value of Relational\")\nTypeError: cannot determine truth value of Relational"
+  ],
+  "question_7877": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve, Interval, UnionSet, S\nImportError: cannot import name 'UnionSet' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_722": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_244": [
+    "Error: Traceback (most recent call last):\n      valid_rx = range_r.intersection(domain_s)\n      return self.intersect(other)\n      return Intersection(self, other)\n      args = list(ordered(set(_sympify(args))))\n      h = hash((type(self).__name__,) + self._hashable_content())\nTypeError: unhashable type: 'set'"
+  ],
+  "question_7670": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, S\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_374": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_7996": [
+    "Error: Traceback (most recent call last):\n      from sympy import Symbol, solve, inequalities\nImportError: cannot import name 'inequalities' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8116": [
+    "Error: Traceback (most recent call last):\n      real_part = Rational(result.as_real_imag()[0].evalf()).limit() # This might be tricky with evalf\nTypeError: limit() missing 2 required positional arguments: 'x' and 'xlim'"
+  ],
+  "question_8223": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8004": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_unisimplex, solve, Interval, Union\nImportError: cannot import name 'solve_unisimplex' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1551": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, Intersection, inequality\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1726": [
+    "Error: Traceback (most recent call last):\n      X_coords = 2 * Z.coords - Y.coords\nAttributeError: 'Point2D' object has no attribute 'coords'"
+  ],
+  "question_8658": [
+    "Error: Traceback (most recent call last):\n      from sympy import set\nImportError: cannot import name 'set' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_7938": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1483": [
+    "Error: Traceback (most recent call last):\n      solutions = solve(eq, x)\n      raise NotImplementedError('solving %s when the argument '\nNotImplementedError: solving Abs(x - 3) when the argument is not real or imaginary."
+  ],
+  "question_1491": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, S\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_368": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, maximize\nImportError: cannot import name 'maximize' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_434": [
+    "Error: Traceback (most recent call last):\n      if sol_x > 1:\n      return func(self, other)\n      return StrictGreaterThan(self, other)\n      raise TypeError(\"Invalid comparison of non-real %s\" % me)\nTypeError: Invalid comparison of non-real 1 - 4*sqrt(14)*I"
+  ],
+  "question_393": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, S\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_760": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_387": [
+    "Error: Traceback (most recent call last):\n      valid_sol2 = [s for s in sol2 if s > 1]\n      valid_sol2 = [s for s in sol2 if s > 1]\n      return func(self, other)\n      return StrictGreaterThan(self, other)\n      raise TypeError(\"Invalid comparison of non-real %s\" % me)\nTypeError: Invalid comparison of non-real 1 - sqrt(2)*I"
+  ],
+  "question_7537": [
+    "Error: Traceback (most recent call last):\n      final_sol = sol1.intersect(sol2)\nAttributeError: 'list' object has no attribute 'intersect'"
+  ],
+  "question_8104": [
+    "Error: Traceback (most recent call last):\n      min_value = expr.subs(critical_point[0])\nKeyError: 0",
+    "Error: Traceback (most recent call last):\n      critical_point = sp.solve([dx, dy], (x, y))[0]\nKeyError: 0"
+  ],
+  "question_1709": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, Interval, S\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1255": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_910": [
+    "Error: Traceback (most recent call last):\n      max_val = sp.maximize(expr, z)[0]\nAttributeError: module 'sympy' has no attribute 'maximize'"
+  ],
+  "question_1172": [
+    "Error: Traceback (most recent call last):\n      x1, y1 = v1[0], v1[1]\nKeyError: 0",
+    "Error: Traceback (most recent call last):\n      v1 = sp.linsolve([line1, line3], (x, y))[0]\nTypeError: 'FiniteSet' object is not subscriptable"
+  ],
+  "question_7715": [
+    "Error: Traceback (most recent call last):\n      a_val, b_val = sol[0]\nKeyError: 0",
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_cefcb2c6d28cef6658c89e00ebfead6f.py\", line 15\n    handling both\n             ^\nSyntaxError: invalid syntax"
+  ],
+  "question_7617": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1503": [
+    "Error: Traceback (most recent call last):\n      area_orig = p1.triangle_area(p2, p3)\nAttributeError: 'Point2D' object has no attribute 'triangle_area'"
+  ],
+  "question_720": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, S, sqrt, Interval\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)",
+    "Error: Traceback (most recent call last):\n      res1 = reduce_inequalities(x >= 0, x, S.Reals)\nTypeError: reduce_inequalities() takes from 1 to 2 positional arguments but 3 were given"
+  ],
+  "question_8372": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_259": [
+    "Error: Traceback (most recent call last):\n      all_x.update([s.evalf() for s in sol3 if 2 <= s <= 4])\n      all_x.update([s.evalf() for s in sol3 if 2 <= s <= 4])\n      return func(self, other)\n      return GreaterThan(self, other)\n      raise TypeError(\"Invalid comparison of non-real %s\" % me)\nTypeError: Invalid comparison of non-real 1.5 - 2.78388218141501*I"
+  ],
+  "question_494": [
+    "Error: Traceback (most recent call last):\n      x_intercepts = solve(expr.subs(y, 0), x)\n      raise NotImplementedError('solving %s when the argument '\nNotImplementedError: solving Abs(x) when the argument is not real or imaginary."
+  ],
+  "question_423": [
+    "Error: Traceback (most recent call last):\n      from sympy import Decimal, Round\nImportError: cannot import name 'Decimal' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8514": [
+    "Error: Traceback (most recent call last):\n      from sympy import ScientificNotation\nImportError: cannot import name 'ScientificNotation' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_7516": [
+    "Error: Traceback (most recent call last):\n      domain = sp.solve_uniset(expr >= 0, x)\nAttributeError: module 'sympy' has no attribute 'solve_uniset'"
+  ],
+  "question_221": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1572": [
+    "Error: Traceback (most recent call last):\n      cond1 = sp.solve_uniset(expr >= 0, x)\nAttributeError: module 'sympy' has no attribute 'solve_uniset'",
+    "Error: Traceback (most recent call last):\n      exclude = sp.Intersection(sol1, sol2)\n      return simplify_intersection(args)\n      raise TypeError(\"Input args to Union must be Sets\")\nTypeError: Input args to Union must be Sets"
+  ],
+  "question_8674": [
+    "Error: Traceback (most recent call last):\n      roots1 = solve(x**2 + 3*x - 4, x) if 'x' in locals() else solve(lambda x: x**2 + 3*x - 4, x)\nNameError: name 'x' is not defined\n\nCommon roots: {-4}"
+  ],
+  "question_8189": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, Interval, S, sqrt\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1062": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, Poly, S\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_484": [
+    "Error: Traceback (most recent call last):\n      expr = 4 * (1*x**4 + 3*x**2 + 1) # symbolic x defined below\nNameError: name 'x' is not defined",
+    "Error: Traceback (most recent call last):\n      full_coeffs = [p.coeff(x, i) for i in range(4, -1, -1)]\n      full_coeffs = [p.coeff(x, i) for i in range(4, -1, -1)]\n      raise NotImplementedError(\nNotImplementedError: Either convert to Expr with `as_expr` method to use Expr's coeff method or else use the `coeff_monomial` method of Polys."
+  ],
+  "question_1677": [
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_b82e603a1476ca6d0678105aa465def2.py\", line 9\n    using solve_poly_inequality for inequality\n          ^\nSyntaxError: invalid syntax",
+    "Error: Traceback (most recent call last):\n      sol = solve_poly_inequality(b**2 - 16, relation='<')\nTypeError: solve_poly_inequality() got an unexpected keyword argument 'relation'"
+  ],
+  "question_8643": [
+    "Error: Traceback (most recent call last):\n      solution = sp.solve_uniset(inequality, n, sp.S.Reals)\nAttributeError: module 'sympy' has no attribute 'solve_uniset'"
+  ],
+  "question_7751": [
+    "Error: Traceback (most recent call last):\n      coeffs = poly.all_coeffs()\nAttributeError: 'Add' object has no attribute 'all_coeffs'"
+  ],
+  "question_8073": [
+    "Error: Traceback (most recent call last):\n      p1 = sp.solve([y - x, y - (-x + 3)], (x, y))[0] # x >= 0\nKeyError: 0"
+  ],
+  "question_7620": [
+    "Error: Traceback (most recent call last):\n      b_val = sp.collect(expanded, sp.symbols('x'))[sp.symbols('x')]\nTypeError: 'Add' object is not subscriptable",
+    "Error: Traceback (most recent call last):\n      b_val = sp.coeff(expanded, x, 1)\nAttributeError: module 'sympy' has no attribute 'coeff'"
+  ],
+  "question_8166": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, minimize_expr, Rational, sqrt\nImportError: cannot import name 'minimize_expr' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_405": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_7541": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, S\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_7630": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8005": [
+    "Error: Traceback (most recent call last):\n      from sympy import Symbol, solve, inequality_solve\nImportError: cannot import name 'inequality_solve' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_534": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_406": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_1098": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8560": [
+    "Error: Traceback (most recent call last):\n      from sympy import Fraction\nImportError: cannot import name 'Fraction' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8289": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, S, sqrt, Intersection\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_93": [
+    "Error: Traceback (most recent call last):\n      y = sp.abs(x + 7) - sp.abs(x - 2)\nAttributeError: module 'sympy' has no attribute 'abs'",
+    "Error: Traceback (most recent call last):\n      y_pw = sp.Piecewise(\n      pair = ExprCondPair(*getattr(ec, 'args', ec))\nTypeError: __new__() missing 2 required positional arguments: 'expr' and 'cond'"
+  ],
+  "question_335": [
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_8a82cff54057acb1dc621d213b8cb3a2.py\", line 22\n    print(\"\n           ^\nSyntaxError: EOL while scanning string literal",
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_72ed9e8e3e58667f360a076371fb6862.py\", line 25\n    output += \"(\" + str(p[0]) + \", \" + str(p[1]) + \")\n                                                     ^\nSyntaxError: EOL while scanning string literal"
+  ],
+  "question_8016": [
+    "Error: Traceback (most recent call last):\n      a_num, a_den = slope.p\nTypeError: cannot unpack non-iterable int object"
+  ],
+  "question_356": [
+    "Error: Traceback (most recent call last):\n      f = sp.lambda_function(lambda x: x**2/4 + x - 3)\nAttributeError: module 'sympy' has no attribute 'lambda_function'"
+  ],
+  "question_1732": [
+    "Error: Traceback (most recent call last):\n      solution = solve(And(discriminant > 0, c > 0), c)\n      solution = _solve(f[0], *symbols, **flags)\n      f_num, sol = solve_linear(f, symbols=symbols)\n      eq = lhs - rhs\nTypeError: unsupported operand type(s) for -: 'And' and 'int'",
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, Interval, Intersection\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_8209": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, Interval, S\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_827": [
+    "Error: Traceback (most recent call last):\n      res = sp.fractional_part(decomp) # This is not the way\nAttributeError: module 'sympy' has no attribute 'fractional_part'"
+  ],
+  "question_8210": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_unisimplex, solve, And\nImportError: cannot import name 'solve_unisimplex' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_459": [
+    "Error:   File \"/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/flaml/autogen/extensions/tmp_code_1794cc0c7b67f4179bdb6a26350dcde2.py\", line 8\n    eq1 = x**2 - 6x + 5 - (29/4 - x)\n                  ^\nSyntaxError: invalid syntax"
+  ],
+  "question_435": [
+    "Error: Traceback (most recent call last):\n      coeffs = f_expanded.coeffs()\nAttributeError: 'Add' object has no attribute 'coeffs'"
+  ],
+  "question_8400": [
+    "Error: Traceback (most recent call last):\n      from sympy import symbols, solve_uniset, Abs, S\nImportError: cannot import name 'solve_uniset' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ],
+  "question_923": [
+    "Error: Timeout"
+  ],
+  "question_789": [
+    "Error: Traceback (most recent call last):\n      b_sq = sp.Rational((2 + sp.sqrt(5))**2, 11)\n      retval = cfunc(*args, **kwargs)\n      p = Rational(p)\n      retval = cfunc(*args, **kwargs)\n      raise TypeError('invalid input: %s' % p)\nTypeError: invalid input: (2 + sqrt(5))**2",
+    "Error: Traceback (most recent call last):\n      x = sp.coeff(res_num, sp.sqrt(55))\nAttributeError: module 'sympy' has no attribute 'coeff'"
+  ],
+  "question_1710": [
+    "Error: Traceback (most recent call last):\n      from sympy import ceil, Rational\nImportError: cannot import name 'ceil' from 'sympy' (/home/javad/miniconda3/envs/mathchat/lib/python3.9/site-packages/sympy/__init__.py)"
+  ]
+}
