@@ -1,5 +1,5 @@
 import os
-from flaml import oai
+from autogen import OpenAIWrapper
 from math_chat import MathChat
 import argparse
 from utils import mylogger, load_level5_math_test_each_category, load_fixed, random_sample_MATH, load_config, setup_proxy, load_local_dataset
@@ -47,10 +47,7 @@ def pseudo_main(config_list):
     # Load config if not provided
     if config_list is None:
         config_list = load_config(args.config)
-    
-    args.model = "gpt-4"
-    oai.ChatCompletion.request_timeout = 60 * 10  # 10 minutes
-    oai.ChatCompletion.set_cache(seed=args.seed, cache_path_root=args.cache_folder)
+
     logger = mylogger(os.path.join(args.folder, "log.txt"))
 
     # 3. load math dataset
@@ -76,12 +73,12 @@ def pseudo_main(config_list):
     # 4. solve
     mathchat_solver = MathChat(
         config_list=config_list,
-        model=args.model,
         prompt_type=args.prompt_type,
         sys_type=args.systype,
         max_round=args.max_round,
         temperature=args.temperature,
         prompt_location=args.prompt_location,
+        cache_seed=args.seed,
         logger=logger,
         refine=args.refine,
         sleep_time=args.sleep_time

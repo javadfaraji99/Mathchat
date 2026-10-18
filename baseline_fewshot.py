@@ -1,30 +1,20 @@
-# adapted from https://github.com/wenhuchen/Program-of-Thoughts/blob/main/run_gsm8k_zs.py
-import openai
 from time import sleep
-from tool import synthesize_program
-from collections import Counter
-from datetime import datetime
-from tqdm import tqdm
 import os
 import json
 import argparse
-from flaml import oai
-import datasets
-import random
+from autogen import OpenAIWrapper
 
-# Caution: distinguish between the two types imports
-from flaml.autogen.math_utils import eval_math_responses, get_answer
+from autogen.math_utils import eval_math_responses, get_answer
 from utils import (
-    load_level5_math_test_each_category,
+    load_local_dataset,
     math_type_mapping,
     write_json,
-    remove_asy_sections,
     mylogger,
+    load_config,
+    setup_proxy,
 )
 
-
 parser = argparse.ArgumentParser()
-# parser.add_argument("--key", default='OPENAI_KEY', type=str)
 parser.add_argument("--dry_run", default=False, action="store_true")
 parser.add_argument("--folder", "-f", dest="folder", help="saving folder", default="./fewshot", type=str)
 parser.add_argument("--cache_folder", "-c", dest="cache_folder", default=".cache/fewshot", help="cache folder")
@@ -33,49 +23,12 @@ parser.add_argument("--categories", dest="categories", help="categories", defaul
 parser.add_argument("--temperature", "-t", dest="temperature", help="temperature", default=1, type=float)
 parser.add_argument("--seed", dest="seed", help="seed", default=41, type=int)
 parser.add_argument("--k", dest="k", help="k", default=3, type=int)
+parser.add_argument("--dataset_folder", "-d", dest="dataset_folder", default="./math_dataset", help="path to dataset folder")
+parser.add_argument("--config", "-cfg", dest="config", default="OAI_CONFIG_LIST.json", help="config file path")
+parser.add_argument("--sleep_time", "-st", dest="sleep_time", help="sleep between API calls", default=0, type=int)
 args = parser.parse_args()
 args.folder = args.folder + "_baseline_fewshot_t" + str(args.temperature) + "_seed" + str(args.seed)
-
-# key = os.getenv(args.key)
-# print(key)
-
-
-def random_sample_level5_train_each_category(k=3, category_to_load=None):
-    """
-    Load level 5 math problems from the train set of  competition dataset.
-    Returns:
-        A list of list of problems. Each list of problems is of the same category.
-    """
-    category_to_load = [i for i in range(7)] if not category_to_load or "all" in category_to_load else category_to_load
-    category_to_load = [int(x) for x in category_to_load]
-    seed = 41
-    data = datasets.load_dataset("competition_math")
-    train_data = data["train"].shuffle(seed=seed)
-    sep_cate = []
-    print("******Loading train data******")
-    for i, category in enumerate(math_type_mapping.keys()):
-        if i not in category_to_load:
-            print(i, category, "(skipped)", flush=True)
-            continue
-        tmp = []
-        for x in range(len(train_data)):
-            if (
-                train_data[x]["level"] == "Level 5"
-                and train_data[x]["type"] == category
-                and "asy" not in train_data[x]["problem"]
-                and "ASY" not in train_data[x]["problem"]
-                and "asy" not in train_data[x]["solution"]
-                and "ASY" not in train_data[x]["solution"]
-            ):
-                tmp.append(train_data[x])
-
-        sep_cate.append(tmp[:k])
-        print(i, category, f"{len(sep_cate[-1])} problems loaded", flush=True)
-    print("******Loading train data done******")
-
-    if len(sep_cate) == 0:
-        raise ValueError("No category is loaded.")
-    return sep_cate
+os.makedirs(args.folder, exist_ok=True)
 
 
 def few_shot_template(examplars):
@@ -91,79 +44,60 @@ def few_shot_template(examplars):
     return few_shot_prompt
 
 
-def fewshot_solve(model, problem, prompt, max_tokens=None):
-    # few shot examplars
-    # examplars = random_select(problem_set, problem, k = k)
-    # few_shot_prompt = few_shot_template(examplars)
-
-    prompt += remove_asy_sections(problem["problem"])
+def fewshot_solve(client, problem, prompt, max_tokens=None):
     if args.dry_run:
         print(prompt)
         print("=======================")
         return
 
     config = {
-        "model": model,
         "messages": [
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt},
         ],
         "n": 1,
-        # 'temperature': args.temperature,
     }
     if max_tokens is not None:
         config["max_tokens"] = max_tokens
 
-    if config_list is not None:
-        raw_responses = oai.ChatCompletion.create(
-            config_list=config_list,
-            **config,
-        )
-    else:
-        raw_responses = oai.ChatCompletion.create(None, **config)
-    responses = oai.ChatCompletion.extract_text(raw_responses)
-
-    return {
-        "response_with_ans": responses[0],
-    }
+    raw_responses = client.create(**config)
+    responses = client.extract_text_or_completion_object(raw_responses)
+    responses = [r if isinstance(r, str) else r.content for r in responses]
+    return {"response_with_ans": responses[0]}
 
 
 if __name__ == "__main__":
-    config_list = None
-
-    # openai.api_key = open("key_e.txt").read().strip()
-    # print(openai.api_key)
-
-    oai.ChatCompletion.request_timeout = 60 * 10  # 10 minutes
-    oai.ChatCompletion.set_cache(seed=args.seed, cache_path_root=args.cache_folder)
-    random.seed(args.seed)
-    os.makedirs(args.folder, exist_ok=True)
+    setup_proxy()
+    config_list = load_config(args.config)
+    client = OpenAIWrapper(
+        config_list=config_list,
+        cache_seed=args.seed,
+        timeout=60 * 10,
+    )
     logger = mylogger(os.path.join(args.folder, "log.txt"))
 
-    engine = "gpt-4"
     aggre_correct = 0
-    problem_sets = load_level5_math_test_each_category(
-        samples_per_category=args.samples_per_category, category_to_load=args.categories
-    )
-
-    examplar_data = random_sample_level5_train_each_category(k=args.k, category_to_load=args.categories)
+    problem_sets = load_local_dataset(args.dataset_folder)
     logger.log("problem id: is_correct $ ans $ correct_ans $ accum_acc", verbose=True)
 
-    for cate_id, problem_set in enumerate(problem_sets):  # one problem_set is one category
-        for i in range(len(problem_set)):
-            problem_set[i]["problem_id"] = str(i)  # assign problem id
+    for cate_id, problem_set in enumerate(problem_sets):
+        if len(problem_set) == 0:
+            continue
 
         logger.log("Solving " + problem_set[0]["type"], verbose=True)
         saving_folder = os.path.join(args.folder, math_type_mapping[problem_set[0]["type"]])
         os.makedirs(saving_folder, exist_ok=True)
-        done_problems = set([int(f.split(".")[0]) for f in os.listdir(saving_folder) if "json" in f])
 
-        assert examplar_data[cate_id][0]["type"] == problem_set[0]["type"], " examplar and test category mismatch"
-        category_prompt = (
-            "Solve a math problem carefully. Put the final answer in \\boxed{}.\n\n"
-            + few_shot_template(examplar_data[cate_id])
-            + """\n\nProblem: """
-        )
+        done_problems = set()
+        for f in os.listdir(saving_folder):
+            if "json" in f:
+                try:
+                    problem_num = int(f.split(".")[0].split('_')[-1])
+                    done_problems.add(problem_num)
+                except ValueError:
+                    continue
+
+        category_prompt = "Solve a math problem carefully. Put the final answer in \\boxed{}.\n\nProblem: "
 
         with open(os.path.join(args.folder, f"prompt_{math_type_mapping[problem_set[0]['type']]}.txt"), "w") as f:
             f.write(category_prompt)
@@ -172,8 +106,7 @@ if __name__ == "__main__":
         for count, problem in enumerate(problem_set):
             problem_path = os.path.join(saving_folder, problem["problem_id"] + ".json")
 
-            # 1. if problem already solved, continue
-            if int(problem["problem_id"]) in done_problems:
+            if int(problem["problem_id"].split('_')[-1]) in done_problems:
                 problem = json.load(open(problem_path, "r"))
                 aggre_correct += problem["is_correct"]
                 correct_counts += problem["is_correct"]
@@ -182,9 +115,11 @@ if __name__ == "__main__":
                     verbose=True,
                 )
                 continue
-            results = fewshot_solve(engine, problem, category_prompt, max_tokens=None)
+
+            results = fewshot_solve(client, problem, category_prompt, max_tokens=None)
             if results is None:
                 break
+
             metrics = eval_math_responses([results["response_with_ans"]], problem["solution"])
             aggre_correct += metrics["success_vote"]
             correct_counts += metrics["success_vote"]
@@ -204,16 +139,17 @@ if __name__ == "__main__":
             )
             if args.dry_run:
                 break
+
         logger.log(
             f"{problem_set[0]['type']} acc: {correct_counts}/{len(problem_set)}= {round(correct_counts / len(problem_set), 4)}",
         )
         logger.log("-----------------------------------")
         if args.dry_run:
             print("------------------------------------")
-        # os.system("tar -czf " + args.folder + ".tar.gz " + args.folder)
 
+    total_num_problem = sum([len(problem_set) for problem_set in problem_sets])
     logger.log(
-        f"Total accuracy: {aggre_correct}/{(len(problem_sets) * len(problem_sets[0]))}={round(aggre_correct / (len(problem_sets) * len(problem_sets[0])), 4)}",
+        f"Total accuracy: {aggre_correct}/{total_num_problem}={round(aggre_correct / total_num_problem, 4)}",
     )
     logger.log("****************************\n\n\n\n")
     os.system("tar -czf " + args.folder + ".tar.gz " + args.folder)

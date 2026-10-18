@@ -13,7 +13,6 @@ def quick_test(config_list):
     
     # Initialize MathChat (using test mode)
     math_chat = MathChat(
-        model="test-model",
         prompt_type="v3.9python",
         prompt_location="user",
         max_round=5,
@@ -22,7 +21,7 @@ def quick_test(config_list):
         config_list=config_list
     )
 
-    output_folder = "./test_output"
+    output_folder = "./test_2_output"
     os.makedirs(output_folder, exist_ok=True)  
 
     # Run test
@@ -32,6 +31,6 @@ def quick_test(config_list):
     print(f"\n📝 Full response:\n{result['response_with_ans']}")
 
 if __name__ == "__main__":
-    config_list = load_config("OAI_CONFIG_LIST.json")
-    config_list = setup_proxy(config_list)
+    config_list = load_config("OAI_CONFIG_GEMMA_E2B.json")
+    config_list = setup_proxy()
     quick_test(config_list)

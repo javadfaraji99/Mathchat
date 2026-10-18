@@ -4,9 +4,9 @@ from io import StringIO
 import regex
 import os
 import re
-from pydantic import BaseModel, Field, Extra, root_validator
+from pydantic import BaseModel, ConfigDict, model_validator
 from typing import Any, Dict, Optional
-from flaml.autogen.code_utils import execute_code
+from autogen.code_utils import execute_code
 from time import sleep
 
 
@@ -214,7 +214,7 @@ class UserProxyAgent:
         query = query.replace("; ", "\n").replace(";", "\n")
         code = self.previous_code + self.add_print_to_last_line(query)
 
-        return_code, output = execute_code(code, use_docker=False, timeout=5)
+        return_code, output, _ = execute_code(code, use_docker=False, timeout=5)
         is_success = return_code == 0
         if isinstance(output, bytes):
             try:
@@ -249,13 +249,13 @@ class UserProxyAgent:
         if is_success:
             # remove print and check if it still works
             tmp = self.previous_code + "\n" + self.remove_print(query) + "\n"
-            rcode, _ = execute_code(tmp, use_docker=False)
+            rcode, _, _ = execute_code(tmp, use_docker=False)
         else:
             tmp = self.previous_code + "\n"
             for line in query.split("\n"):
                 if "import" in line:
                     tmp += line + "\n"
-            rcode, _ = execute_code(tmp, use_docker=False)
+            rcode, _, _ = execute_code(tmp, use_docker=False)
         if rcode == 0:
             self.previous_code = tmp
         return output, is_success
@@ -319,12 +319,10 @@ class WolframAlphaAPIWrapper(BaseModel):
     wolfram_client: Any  #: :meta private:
     wolfram_alpha_appid: Optional[str] = None
 
-    class Config:
-        """Configuration for this pydantic object."""
+    model_config = ConfigDict(extra="forbid")
 
-        extra = Extra.forbid
-
-    @root_validator()
+    @model_validator(mode="before")
+    @classmethod
     def validate_environment(cls, values: Dict) -> Dict:
         """Validate that api key and python package exists in environment."""
         wolfram_alpha_appid = get_from_dict_or_env(values, "wolfram_alpha_appid", "WOLFRAM_ALPHA_APPID")

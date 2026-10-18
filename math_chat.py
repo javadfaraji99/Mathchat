@@ -1,20 +1,18 @@
 from user_proxy_agent import UserProxyAgent
-from flaml.autogen.math_utils import eval_math_responses, get_answer
-from flaml import oai
+from autogen.math_utils import eval_math_responses, get_answer
+from autogen import OpenAIWrapper
 import os
 import json
 import re
 import copy
-from openai.error import InvalidRequestError, RateLimitError, Timeout
+from openai import RateLimitError, APITimeoutError, BadRequestError
 from utils import write_json, math_type_mapping, mylogger
 from prompts import PROMPTS
 import time
-import openai
 
 class MathChat:
     def __init__(
         self,
-        model,
         prompt_type="select",
         prompt_location="user",
         sys_type="s0",
@@ -23,7 +21,7 @@ class MathChat:
         n=1,
         temperature=1,
         logger=None,
-        use_cache=True,
+        cache_seed: int | None = 41,
         refine=False,
         config_list=None,
         sleep_time=30,
@@ -54,16 +52,19 @@ class MathChat:
             ]
         )
         self.deafult_config = {
-            "model": model,
             "messages": messages,
             "n": n,  # n should be 1 for now
             "temperature": temperature,
         }
 
         self.max_invalid_q_per_step = max_invalid_q_per_step
-        self.use_cache = use_cache
         self.logger = logger
         self.config_list = config_list
+        self.client = OpenAIWrapper(
+            config_list=config_list,
+            cache_seed=cache_seed,   
+            timeout= 60 * 10,                
+        )
 
     def make_conversation(self, problem, n=1, file_to_be_saved=None):
         conversation_start_time = time.time()
@@ -107,18 +108,12 @@ class MathChat:
         while rr < self.max_round:
             # 1. get the response from the assistant, handle exceptions
             try:
-                if self.config_list is not None:
-                    raw_responses = oai.ChatCompletion.create(
-                        config_list=self.config_list, **config, use_cache=self.use_cache
-                    )
-                    # print(raw_responses)
-                else:
-                    raw_responses = oai.ChatCompletion.create(None, **config, use_cache=self.use_cache)
-            except InvalidRequestError as e:
+                raw_responses = self.client.create(**config)
+            except BadRequestError as e:
                 print(problem["type"], problem["problem_id"], str(e), flush=True)
                 save_message_to_file(str(e))
                 break
-            except Timeout:
+            except APITimeoutError:
                 print("timeout, retrying...", flush=True)
                 continue
             except RateLimitError as e:
@@ -162,20 +157,23 @@ class MathChat:
                 time.sleep(self.sleep_time - elapsed)
             start_time = time.time()
             
+            if raw_responses is None: 
+                print("Error in getting response")
+                break
             try:
-                total_completion_tokens += raw_responses["usage"]["completion_tokens"]
+                total_completion_tokens += raw_responses.usage.completion_tokens
             except Exception:
                 pass
 
-            assert raw_responses != -1, "Error in getting response"
-            responses = oai.ChatCompletion.extract_text(raw_responses)
+            responses = self.client.extract_text_or_completion_object(raw_responses)
+            responses = [r if isinstance(r, str) else r.content for r in responses]
             assert len(responses) == 1, "More than one response"  # right now we only use one response
 
             # 2. process response
             save_message_to_file(f"assistant: {self.str_splitter(responses[0])}{seperate_line}")
             # token_used = raw_responses['usage']['total_tokens']
             # print(raw_responses)
-            if raw_responses["usage"]["total_tokens"] >= 8000:
+            if raw_responses.usage.total_tokens >= 8000:
                 error_str = "Use more than 8000 many tokens, breaking."
                 print(error_str)
                 save_message_to_file(error_str)
@@ -471,12 +469,8 @@ class MathChat:
         }
         
         try:
-            raw_response = oai.ChatCompletion.create(
-                config_list=self.config_list, 
-                **config, 
-                use_cache=self.use_cache
-            )
-            result = oai.ChatCompletion.extract_text(raw_response)[0]
+            raw_response = self.client.create(**config)
+            result = self.client.extract_text_or_completion_object(raw_response)[0]
             return "YES" in result.upper()
         except Exception as e:
             print(f"LLM verification failed: {e}")

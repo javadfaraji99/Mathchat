@@ -1,31 +1,23 @@
-# adapted from https://github.com/wenhuchen/Program-of-Thoughts/blob/main/run_gsm8k_zs.py
-import openai
 from time import sleep
-from tool import synthesize_program
-from collections import Counter
-from datetime import datetime
-from tqdm import tqdm
 import os
 import json
 import argparse
-from flaml import oai
-import datasets
+from autogen import OpenAIWrapper
 
-# Caution: distinguish between the two types imports
-from flaml.autogen.math_utils import eval_math_responses, get_answer
+from autogen.math_utils import eval_math_responses, get_answer
+from autogen.code_utils import execute_code
 from utils import (
-    load_level5_math_test_each_category,
+    load_local_dataset,
     math_type_mapping,
     write_json,
     remove_asy_sections,
     mylogger,
-    random_sample_MATH,
+    load_config,
+    setup_proxy,
 )
-from flaml.autogen.code_utils import execute_code
-
+from tool import synthesize_program
 
 parser = argparse.ArgumentParser()
-# parser.add_argument("--key", default='OPENAI_KEY', type=str)
 parser.add_argument("--dry_run", default=False, action="store_true")
 parser.add_argument("--folder", "-f", dest="folder", help="saving folder", default="./PoT", type=str)
 parser.add_argument("--cache_folder", "-c", dest="cache_folder", default=".cache/PoT", help="cache folder")
@@ -34,21 +26,23 @@ parser.add_argument("--temperature", "-t", dest="temperature", help="temperature
 parser.add_argument("--seed", dest="seed", help="seed", default=41, type=int)
 parser.add_argument("--categories", dest="categories", help="categories", default=[0, 1], nargs="+")
 parser.add_argument("--sample_all", help="samples per category", default=0, type=int)
+parser.add_argument("--dataset_folder", "-d", dest="dataset_folder", default="./math_dataset", help="path to dataset folder")
+parser.add_argument("--config", "-cfg", dest="config", default="OAI_CONFIG_LIST.json", help="config file path")
+parser.add_argument("--sleep_time", "-st", dest="sleep_time", help="sleep between API calls", default=0, type=int)
 args = parser.parse_args()
-args.folder = args.folder + "_baseline_PoT" "_t" + str(args.temperature) + "_seed" + str(args.seed)
+args.folder = args.folder + "_baseline_PoT_t" + str(args.temperature) + "_seed" + str(args.seed)
 if args.sample_all != 0:
     args.folder += "_random_sample"
-# key = os.getenv(args.key)
-# print(key)
+os.makedirs(args.folder, exist_ok=True)
 
 
-def PoT_solve(model, problem, max_tokens=None):
-    commented_problem = problem["problem"].replace("\n", "\n# ")  # in case the problem is multiline
+def PoT_solve(client, problem, max_tokens=None):
+    commented_problem = problem["problem"].replace("\n", "\n# ")
     commented_problem = remove_asy_sections(commented_problem)
     full_prompt = f"""
 import math
 import numpy as np
-import sympy as sp # added
+import sympy as sp
 
 # Question: {commented_problem}
 # Answer this question by implementing a solver() function.
@@ -64,7 +58,6 @@ def solver():
         return
 
     config = {
-        "model": model,
         "messages": [
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": full_prompt},
@@ -74,12 +67,12 @@ def solver():
     if max_tokens is not None:
         config["max_tokens"] = max_tokens
 
-    raw_responses = oai.ChatCompletion.create(config_list=config_list, **config)
-    responses = oai.ChatCompletion.extract_text(raw_responses)
+    raw_responses = client.create(**config)
+    responses = client.extract_text_or_completion_object(raw_responses)
+    responses = [r if isinstance(r, str) else r.content for r in responses]
 
-    # TODO: adapt for voting
     program = synthesize_program(responses[0], full_prompt)
-    return_code, ans = execute_code(program, timeout=5, use_docker=False)
+    return_code, ans, _ = execute_code(program, timeout=5, use_docker=False)
     if isinstance(ans, bytes):
         try:
             ans = ans.decode("ascii")
@@ -88,7 +81,7 @@ def solver():
                 ans = ans.decode("utf-8")
             except Exception:
                 ans = "The return cannot be decoded."
-    
+
     ans = "Error" if return_code != 0 or ans is None else ans
     response_with_ans = "\\boxed{" + str(ans) + "}"
     return {
@@ -98,41 +91,41 @@ def solver():
 
 
 if __name__ == "__main__":
-    config_list = None
-    # openai.api_key = open("key_e.txt").read().strip()
-    # print(openai.api_key)
-    oai.ChatCompletion.request_timeout = 60 * 10  # 10 minutes
-    oai.ChatCompletion.set_cache(seed=args.seed, cache_path_root=args.cache_folder)
-
-    os.makedirs(args.folder, exist_ok=True)
+    setup_proxy()
+    config_list = load_config(args.config)
+    client = OpenAIWrapper(
+        config_list=config_list,
+        cache_seed=args.seed,
+        timeout=60 * 10,
+    )
     logger = mylogger(os.path.join(args.folder, "log.txt"))
 
-    engine = "gpt-4"
     aggre_correct = 0
-    problem_sets = load_level5_math_test_each_category(
-        samples_per_category=args.samples_per_category, category_to_load=args.categories
-    )
-    if args.sample_all != 0:
-        problem_sets = random_sample_MATH(args.sample_all)
+    problem_sets = load_local_dataset(args.dataset_folder)
     logger.log("problem id: is_correct $ ans $ correct_ans $ accum_acc", verbose=True)
 
-    for problem_set in problem_sets:  # one problem_set is one category
+    for problem_set in problem_sets:
         if len(problem_set) == 0:
             continue
-        for i in range(len(problem_set)):
-            problem_set[i]["problem_id"] = str(i)  # assign problem id
 
         logger.log("Solving " + problem_set[0]["type"], verbose=True)
         saving_folder = os.path.join(args.folder, math_type_mapping[problem_set[0]["type"]])
         os.makedirs(saving_folder, exist_ok=True)
-        done_problems = set([int(f.split(".")[0]) for f in os.listdir(saving_folder) if "json" in f])
+
+        done_problems = set()
+        for f in os.listdir(saving_folder):
+            if "json" in f:
+                try:
+                    problem_num = int(f.split(".")[0].split('_')[-1])
+                    done_problems.add(problem_num)
+                except ValueError:
+                    continue
 
         correct_counts = 0
         for count, problem in enumerate(problem_set):
             problem_path = os.path.join(saving_folder, problem["problem_id"] + ".json")
 
-            # 1. if problem already solved, continue
-            if int(problem["problem_id"]) in done_problems:
+            if int(problem["problem_id"].split('_')[-1]) in done_problems:
                 problem = json.load(open(problem_path, "r"))
                 aggre_correct += problem["is_correct"]
                 correct_counts += problem["is_correct"]
@@ -142,7 +135,7 @@ if __name__ == "__main__":
                 )
                 continue
 
-            results = PoT_solve(engine, problem)
+            results = PoT_solve(client, problem)
             metrics = eval_math_responses([results["response_with_ans"]], problem["solution"])
             aggre_correct += metrics["success_vote"]
             correct_counts += metrics["success_vote"]
@@ -162,6 +155,7 @@ if __name__ == "__main__":
             )
             if args.dry_run:
                 break
+
         logger.log(
             f"{problem_set[0]['type']} acc: {correct_counts}/{len(problem_set)}= {round(correct_counts / len(problem_set), 4)}",
         )
