@@ -24,7 +24,8 @@ class MathChat:
         cache_seed: int | None = 41,
         refine=False,
         config_list=None,
-        sleep_time=30,
+        sleep_time=0,
+        thinking=True, 
     ):
         self.max_round = max_round
         if prompt_type not in PROMPTS:
@@ -35,6 +36,7 @@ class MathChat:
         self.prompt = PROMPTS[prompt_type]
         self.refine = refine
         self.sleep_time = sleep_time
+        self.thinking = thinking
 
         # if the prompt_location is set to system, then the prompt is put in the system message
         self.sys_type = sys_type
@@ -53,9 +55,11 @@ class MathChat:
         )
         self.deafult_config = {
             "messages": messages,
-            "n": n,  # n should be 1 for now
+            "n": n,
             "temperature": temperature,
         }
+        if not self.thinking:
+            self.deafult_config["reasoning_effort"] = "none"
 
         self.max_invalid_q_per_step = max_invalid_q_per_step
         self.logger = logger
@@ -83,7 +87,12 @@ class MathChat:
         if self.prompt_loaction == "system":
             problem_prompt = {"role": "user", "content": problem["problem"]}
         config["messages"].append(problem_prompt)
-
+        conversation_log = []
+        conversation_log.append({
+            "round": 0,
+            "role": "user",
+            "content": problem_prompt["content"],
+        })
         # save a readable conversation in txt file
         def save_message_to_file(message):
             if file_to_be_saved is not None:
@@ -103,7 +112,7 @@ class MathChat:
         invalid_q = 0  # for query
         response_with_ans = ""  # save the response with \box to get the answer
         rr = 0  # round
-        total_completion_tokens = 0
+        total_completion_tokens = 0         
         start_time = time.time()
         while rr < self.max_round:
             # 1. get the response from the assistant, handle exceptions
@@ -168,9 +177,34 @@ class MathChat:
             responses = self.client.extract_text_or_completion_object(raw_responses)
             responses = [r if isinstance(r, str) else r.content for r in responses]
             assert len(responses) == 1, "More than one response"  # right now we only use one response
+  
+            reasoning_text = ""
+            try:
+                choice = raw_responses.choices[0]
+                msg = getattr(choice, "message", None)
+                if msg is not None:
+                    reasoning_text = (
+                        getattr(msg, "reasoning_content", None)
+                        or getattr(msg, "reasoning", None)
+                        or ""
+                    )
+                    if not reasoning_text:
+                        extra = getattr(msg, "model_extra", None) or {}
+                        reasoning_text = extra.get("reasoning_content") or extra.get("reasoning") or ""
+            except Exception:
+                reasoning_text = ""
+
+            if reasoning_text:
+                save_message_to_file(f"reasoning: {self.str_splitter(reasoning_text)}{seperate_line}")
 
             # 2. process response
             save_message_to_file(f"assistant: {self.str_splitter(responses[0])}{seperate_line}")
+            conversation_log.append({
+                "round": rr,
+                "role": "assistant",
+                "content": responses[0],
+                "reasoning": reasoning_text,
+            })
             # token_used = raw_responses['usage']['total_tokens']
             # print(raw_responses)
             if raw_responses.usage.total_tokens >= 8000:
@@ -212,6 +246,11 @@ class MathChat:
                         is_refine_process = True
                         refine_message = "Please check your answer to make sure it meets conditions in the problem and you doesn't make any mistakes. If you find any mistake, please correct it and put the corrected answer in box. If you find no mistake, put previous answer in the box."
                         config["messages"].append({"role": "user", "content": refine_message})
+                        conversation_log.append({
+                            "round": rr,
+                            "role": "user",
+                            "content": refine_message,
+                        })
                         save_message_to_file(
                             "user: {a}{s}".format(a=config["messages"][-1]["content"], s=seperate_line)
                         )
@@ -231,6 +270,11 @@ class MathChat:
             if is_query_sucess:
                 query_response += tmp_msg  # add the query response from the previous step
             config["messages"].append({"role": "user", "content": query_response})
+            conversation_log.append({
+                "round": rr,
+                "role": "user",
+                "content": query_response,
+            })
 
             invalid_q = 0 if is_query_sucess else invalid_q + 1
             # print(invalid_q)
@@ -238,6 +282,7 @@ class MathChat:
                 assert config["messages"][-1]["role"] == "user", "The last message should be from user"
                 skip_query_str = "Please revisit the problem statement and your reasoning. If you think this step is correct, solve it yourself and continue the next step. Otherwise, correct this step."
                 config["messages"][-1]["content"] = skip_query_str
+                conversation_log[-1]["content"] = skip_query_str
                 save_message_to_file(f"****: Replacing {query_response}****\n")
                 invalid_q = 0
 
@@ -250,12 +295,14 @@ class MathChat:
         solution_time = time.time() - conversation_start_time
         return {
             "total_completion_tokens": total_completion_tokens,
-            "valid_q_count": proxy_agent.valid_q_count,  # number of valid queries
+            "valid_q_count": proxy_agent.valid_q_count,
             "total_q_count": proxy_agent.total_q_count,
-            "is_valid_reply": is_valid_reply,  # whether the assistant can give a valid reply
-            "response_with_ans": response_with_ans,  # string instead of list
-            "response_with_new_ans": response_with_new_ans,  # string instead of list
+            "is_valid_reply": is_valid_reply,
+            "response_with_ans": response_with_ans,
+            "response_with_new_ans": response_with_new_ans,
             "messages": config["messages"],
+            "conversation_log": conversation_log,
+            "thinking": self.thinking,
             "round": min(rr + 1, self.max_round),
             "solution_time": solution_time,
         }
@@ -399,7 +446,9 @@ class MathChat:
                     "valid_q_count": result["valid_q_count"],  # total number of valid queries
                     "total_q_count": result["total_q_count"],  # total number of queries
                     "messages": result["messages"],  # the conversation
+                    "conversation_log": result["conversation_log"],
                     "total_completion_tokens": result["total_completion_tokens"],
+                    "thinking": result["thinking"],
                     "solution_time": result["solution_time"],
                 }
             )
@@ -465,7 +514,8 @@ class MathChat:
                 {"role": "user", "content": verify_prompt}
             ],
             "n": 1,
-            "temperature": 0.1
+            "temperature": 0.1,
+            "reasoning_effort": "none",
         }
         
         try:
